@@ -1,3 +1,32 @@
+.poppin {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color: #381713
+}
+
+h2 {
+    font-weight: 500;
+    color: brown;
+}
+
+h3 {
+    font-weight: 500i;
+}
+
+h4 {
+    font-weight: 300;
+}
+
+h5{
+    font-weight: 300i;
+}
+
+.body {
+    background-color: bisque
+}
+
 .Row
 {
     display: table;
