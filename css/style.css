@@ -1,22 +1,11 @@
-.container {
-    grid-template-columns: 100px 50px 100px;
-    grid-template-rows: 80px auto 80px;
-    grid-column-gap: 10px;
-    grid-row-gap: 15px;
+.Row
+{
+    display: table;
+    width: 100%; 
+    table-layout: auto; 
+    border-spacing: 5px; 
 }
-
-.item-a {
-    align-self: center, stretch;
-    justify-self: center, stretch;
-
-}
-
-.item-b {
-    align-self: center, stretch;
-    justify-self: center, stretch;
-}
-
-.item-c {
-    align-self: center, stretch;
-    justify-self: center, stretch;
+.Column
+{
+    display: table-cell;
 }
