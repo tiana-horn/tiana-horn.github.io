@@ -1,5 +1,6 @@
-.poppin {
+.body {
     font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke
 }
 .container {
     border: 5px lightgray;
@@ -27,9 +28,7 @@ h5{
     font-weight: 300i;
 }
 
-.body {
-    background-color: whitesmoke
-}
+
 
 .Row
 {
