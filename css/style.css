@@ -27,12 +27,33 @@ h5{
 }
 .Row
 {
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
     display: table;
     width: 100%; 
     table-layout: fixed; 
     border-spacing: 5px; 
+    position:relative;
 }
 .Column
 {
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
     display: table-cell;
+
+
+}
+.headshot {
+    position: absolute;
+    bottom: 0;
+
+}
+.edu {
+    position: absolute;
+    bottom: 10;
+
 }
