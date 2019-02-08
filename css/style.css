@@ -5,11 +5,9 @@
     border: 5px lightgray;
     background-color: lightgray;
 }
-
 h1 {
     color: #001A57
 }
-
 btn {
     background-color: 
 }
@@ -17,7 +15,6 @@ h2 {
     font-weight: 500;
     color: brown;
 }
-
 h3 {
     font-weight: 500i;
 }
@@ -25,13 +22,9 @@ h3 {
 h4 {
     font-weight: 300;
 }
-
 h5{
     font-weight: 300i;
 }
-
-
-
 .Row
 {
     display: table;
