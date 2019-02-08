@@ -1,6 +1,5 @@
 .body {
     font-family: 'Poppins', sans-serif;
-    background-color: whitesmoke
 }
 .container {
     border: 5px lightgray;
@@ -8,9 +7,12 @@
 }
 
 h1 {
-    color: #381713
+    color: #001A57
 }
 
+btn {
+    background-color: 
+}
 h2 {
     font-weight: 500;
     color: brown;
@@ -34,7 +36,7 @@ h5{
 {
     display: table;
     width: 100%; 
-    table-layout: auto; 
+    table-layout: fixed; 
     border-spacing: 5px; 
 }
 .Column
