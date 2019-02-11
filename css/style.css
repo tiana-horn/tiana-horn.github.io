@@ -31,7 +31,7 @@ h5{
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 10px;
-    display: table;
+    display: table-row;
     width: 100%; 
     table-layout: fixed; 
     border-spacing: 5px; 
@@ -47,16 +47,15 @@ h5{
 
 
 }
-.headshot {
+ .headshot {
+    bottom: 10;
+
+} 
+/* .edu {
     position: absolute;
     bottom: 10;
 
-}
-.edu {
-    position: absolute;
-    bottom: 10;
-
-}
+} */
 main {
     margin-bottom: 200%;
   }
