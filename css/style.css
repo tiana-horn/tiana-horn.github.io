@@ -8,9 +8,7 @@
 h1 {
     color: #001A57
 }
-btn {
-    background-color: 
-}
+
 h2 {
     font-weight: 500;
     color: whitesmoke
@@ -40,19 +38,63 @@ h5{
 .Column
 {
     padding-top: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-bottom: 10px;
     display: table-cell;
+    justify-content: space-between;
 
 
 }
-.headshot {
+.boat {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+/* .skills {
+    width: 40px;
+    height: 10px;
+} */
+/* .item1 {
+
+    display: flex;
+    justify-content: flex-start;
+}
+.item2 {
+
+    display: flex;
+    justify-content: center;
+}
+.item3 {
+
+    display: flex;
+    justify-content: flex-end;
+} */
+.headshot { 
+
+    min-width: 150px;
+    min-height: 25px;
+
+}
+.toprow {
+    display: flex;
+    justify-content: space-between;
+}
+/* .edu {
     position: absolute;
     bottom: 10;
+    min-width: 250px;
+    min-height: 25px;
 
+
+} */
+.btn {
+    min-width: 100px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
 }
-.edu {
+.skills {
     position: absolute;
     bottom: 10;
 
