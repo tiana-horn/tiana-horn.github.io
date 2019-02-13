@@ -71,14 +71,25 @@ h5{
     justify-content: flex-end;
 } */
 .headshot { 
-
-    min-width: 150px;
-    min-height: 150px;
+    margin-left: 20px;
+    min-width: 250px;
+    min-height: 250px;
 
 }
+
+
 .toprow {
     display: flex;
     justify-content: space-between;
+}
+.econtainer {
+     background-color: whitesmoke;
+     min-width: 250px;
+     min-height: 250px;
+     margin-top: 80px;
+     margin-left: 35px;
+
+    
 }
 /* .edu {
     position: absolute;
