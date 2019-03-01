@@ -1,6 +1,10 @@
 .body {
     font-family: 'Poppins', sans-serif;
 }
+.not-allowed     { 
+    cursor: not-allowed; 
+}
+
 .container {
     border: 5px lightgray;
     background-color: lightgray;
@@ -150,3 +154,13 @@ main {
     margin: 0 0.5em;
     color: white;
   }
+
+  .cursors {
+    cursor: url(file:///Users/tianahorn/coding/python/GitPage/tiana-horn.github.io/images/cursor.png), auto ;
+  }
+
+ .changepic > div:hover {
+    background: #eee;
+
+
+ } 
