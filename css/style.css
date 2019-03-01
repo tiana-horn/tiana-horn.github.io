@@ -156,7 +156,7 @@ main {
   }
 
   .cursors {
-    cursor: url(file:///Users/tianahorn/coding/python/GitPage/tiana-horn.github.io/images/cursor.png), auto ;
+    cursor: url(http://tianahorn.com/images/cursor.png), auto ;
   }
 
  .changepic > div:hover {
