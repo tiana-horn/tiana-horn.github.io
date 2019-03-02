@@ -51,8 +51,27 @@ h5{
 .exp {
 
     background-color: whitesmoke;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
+    margin-right: 70px;
+
+}
+
+.about {
+
+  background-color: white;
+  width: 350px;
+  height: 350px;
+  margin-right: 70px;
+
+}
+
+.proj {
+
+  background-color: white;
+  width: 350px;
+  height: 500px;
+  margin-right: 70px;
 
 }
 
