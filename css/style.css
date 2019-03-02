@@ -1,13 +1,17 @@
+
 .body {
     font-family: 'Poppins', sans-serif;
+
 }
-.not-allowed     { 
-    cursor: not-allowed; 
+
+.article {
+  margin: 5rem;
+
 }
 
 .container {
     border: 5px lightgray;
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 h1 {
     color: #001A57
@@ -27,104 +31,55 @@ h4 {
 h5{
     font-weight: 300;
 }
-.Row
-{
-    padding-top: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-    display: table;
-    width: 100%; 
-    table-layout: fixed; 
-    border-spacing: 5px; 
-    position:relative;
+
+h6 {
+  font-weight: 500i;
+  color: #262626;
 }
-.Column
-{
-    padding-top: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 10px;
-    display: table-cell;
-    justify-content: space-between;
+
+
+.tiana-headshot { 
+    min-width: 250px;
+    min-height: 250px;
 
 
 }
-.boat {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-/* .skills {
-    width: 40px;
-    height: 10px;
-} */
-/* .item1 {
-
-    display: flex;
-    justify-content: flex-start;
-}
-.item2 {
-
-    display: flex;
-    justify-content: center;
-}
-.item3 {
-
-    display: flex;
-    justify-content: flex-end;
-} */
-.headshot { 
-    min-width: 150px;
-    min-height: 150px;
-    margin-left: 10px;
 
 
-}
-/* 
-
-    position: relative;
-    display: inline-block;
-
-<a href="#"><img src="http://placekitten.com/100/100" /></a>
-
-a {
-  position: relative;
-  display: inline-block;
-}
-a:hover:before {
-  content: '';
-  display: block;
-  background: rgba(255, 0, 0, .5); 
-  width: 20px; 
-  height: 100px; 
-  position: absolute;
-  top: 0;
-  right: 0;
-} */
-
-.toprow {
-    display: flex;
-    justify-content: space-between;
-}
 .econtainer {
      background-color: whitesmoke;
-     min-width: 250px;
-     min-height: 100px;
-     margin-top: 140px;
-     margin-left: 25px;
-
-
-    
+     width: 250px;
+     height: 250px;
+     margin-top: 140px;    
 }
-/* .edu {
-    position: absolute;
-    bottom: 10;
-    min-width: 250px;
-    min-height: 25px;
 
+.exp {
 
-} */
+    background-color: whitesmoke;
+    width: 350px;
+    height: 350px;
+    margin-right: 70px;
+
+}
+
+.about {
+
+  background-color: white;
+  width: 350px;
+  height: 350px;
+  margin-right: 70px;
+
+}
+
+.proj {
+
+  background-color: white;
+  width: 350px;
+  height: 500px;
+  margin-right: 70px;
+
+}
+
 .btn {
     min-width: 100px;
     min-height: 50px;
@@ -160,7 +115,6 @@ main {
   }
 
  .changepic > div:hover {
-    background: #eee;
-
-
+    src: url(http://tianahorn.com/images/cursor.png);
  } 
+
