@@ -32,6 +32,11 @@ h5{
     font-weight: 300;
 }
 
+h6 {
+  font-weight: 500i;
+  color: #262626;
+}
+
 
 .tiana-headshot { 
     min-width: 250px;
