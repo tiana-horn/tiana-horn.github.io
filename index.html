@@ -7,40 +7,39 @@ Tiana Horn
 <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,500,500i,700,900" rel="stylesheet">
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
+
+  
+    <script src="js/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,500,500i,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    
+
+
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 </head>
-<div class= "cursors">
 
+<script src="js/main.js" defer></script>
+
+<div class= "cursors">
 
 <nav class="floating-menu flex-wrap flex justify-between fl-100">
 
-         <h2 class="tc white f5 fl w-100 pt0 ma0"> tiana.horn@gmail.com </h2>
-
-    <div class=" fl w-100 flex-wrap flex justify-between fl-100">
-        <h4 class="tc fl w-10"> </h4>
-        <a href="#"><h3 class="tc fl w-10 white f4 pb4 pb0 ma0">CV/Resume</h3></a>
-        <a href="#"><h3 class="tc fl w-10 white f4 pb4  ma0">About</h3></a>
-        <a href="#"><h3 class="tc fl w-10 white f4 pb4  ma0">Contact</h3></a>
+       
 
 
-        <h2 class="tc white f3 fl w-20 f2 pt2  ma0"> Tiana M. Horn </h2>
-
-
-        <a href="#"><h3 class="tc fl w-10 white f4 pb4  ma0">Portfolio</h3></a>
-        <a href="#"><h3 class="tc fl w-10 white f4 pb4  ma0">Experience</h3></a>
-        <a href="#"><h3 class="tc fl w-10 white f4 pb4  ma0">More</h3></a>
-        <h4 class="tc fl w-10"> </h4>
-    </div>
-
-
-
-
+ <h1 class="tc white f2 fl w-100 f2 pt2  ma0"> Tiana M. Horn </h1>
+ <h2 class="tc white f5 fl w-100 pt0 ma0"> tiana.horn@gmail.com </h2>
 
 
 </nav>
+<div id="page">
+</div>
+
+
+
 
 <body class="body"> 
 
@@ -49,19 +48,16 @@ Tiana Horn
 
 
 
-            <div class=" flex-wrap flex justify-between fl-100">
+            <div class=" flex-wrap flex justify-between pl3 ml3 fl-100">
 
-                <div class="about fl w-third w-100  ma3 pa4 mt3 mb3">
+
+
+                <div class="about fl w-third w-100  tc pb7 ml2 pl2 mt5 mb5">
                     <img src="images/tiana.jpg"  width=250 height=250 alt="Tiana's headshot"  data-src="images/tiana.jpg" data-gif="images/coding.jpg" >
 
-                </div>
 
-
-                <div class="about fl w-third w-100  ma3 pa4 mt3 mb3">
- 
-
-                    <h1 class="pa0 tc mt4 pt0 ma0">EDUCATION</h1>
-                        <h4 class="pa0 mt4 f4 tc ma0">Momentum Learning</h4>
+                        <h1 class="tc  mt1">EDUCATION</h1>
+                        <h4 class="pa0 mt1 f4 tc ma0">Momentum Learning</h4>
                         <h4 class="pa0  f4 tc ma0"></h4>
                         <h4 class="pa0  f4 tc ma0"></h4>
 
@@ -76,20 +72,27 @@ Tiana Horn
                         <h5 class="pa0 tc ma0">September 2017 </h5>
 
 
+
                 </div>
-                <div class="about fl w-third w-100  ma3 pa4 mt3 mb3">
+
+
+                <div class="about container tc fl w-third w-100 mr4 pr4 mt5 mb3">
 
                     <h1 class="tc pt4 ma0" >TECHNICAL SKILLS</h1>
-                        <ul class='f6 '> Expert: Python, Django, HTML, CSS, PostgreSQL, Object-Oriented Programming, Version Control
+                        <ul class='f6 '><b class="ttu">Expert:</b> Python, Django, HTML, CSS, PostgreSQL, Object-Oriented Programming, Version Control
                         </ul>
-                        <ul class='f6 mt2'> Proficient: APIs, JavaScript, Vue.js, Tachyons
+                        <ul class='f6 mt2'><b class="ttu">Proficient:</b> APIs, JavaScript, Vue.js, Tachyons
                         </ul>
-                        <ul class='f6 mt2'> Competent: jQuery, PostGIS,  Bootstrap
+                        <ul class='f6 mt2'><b class="ttu">Competent:</b>jQuery, PostGIS,  Bootstrap
                         </ul>
-                        <ul class='f6 mt2'> Beginner: Leaflet, Esri/Arcgis,
+                        <ul class='f6 mt2'><b class="ttu">Beginner:</b>  Leaflet, Esri/Arcgis, SCSS
                         </ul>
 
-                        <a href="https://github.com/tiana-horn" target="_blank" ><img class="grow pt0 btn center pb2" src="images/GithubBlue1.png" width=200 height=50 alt="Tiana's Github account (button)" ></a>
+                          
+                                <a href="https://github.com/tiana-horn" target="_blank" ><img class="grow pt0 btn center mb3 pb7" src="images/GithubBlue1.png" width=50 height=50 alt="Tiana's Github account (button)" ></a>
+                          
+
+
 
                 </div>
 
@@ -97,12 +100,12 @@ Tiana Horn
             </div>
             
             
-            <h1 class=" tc">PROJECTS</h1>
 
         <group class=" flex-wrap flex justify-between fl-100">
 
+            <h1 class=" tc pt4 fl w-100">PROJECTS</h1>
 
-                <div class=" proj pa4 ma2 ">
+                <div class=" proj  pt0 pa4 ma2 ">
                      <a href="https://getjustice.herokuapp.com/" target="_blank" ><img class="dim pt0 btn center" src="images/getJusticeMockup.png"  alt="Picture of getJustice chrome extension and mobile website" ></a>
 
                     <div class="tc">
@@ -115,7 +118,7 @@ Tiana Horn
                     </ul>                
                 </div>
 
-                <div class=" proj pa4 ma2 ">
+                <div class=" proj pt0 pa4 ma2 ">
                     <a href="https://fathomless-escarpment-97865.herokuapp.com/" target="_blank" ><img class="dim pt0 btn center" src="images/MicrobloggingMockup.png"  alt="Picture of Decreedly website" ></a>
 
                     <div class="tc">
@@ -127,12 +130,12 @@ Tiana Horn
             
                 </div>
 
-               <div class="proj pa4 ma2 ">
+               <div class="proj pt0 pa4 ma2 ">
                      <a href="https://hidden-woodland-87835.herokuapp.com/" target="_blank" ><img class="dim pt0 btn center pb2" src="images/ApileMockup.png"  alt="Picture of Apile website" ></a>
 
                     <div class="tc">
                         <a href="https://hidden-woodland-87835.herokuapp.com/" target="_blank" class="no-underline black">
-                        <h6 class="f2 ma0" >Apile</h6></a></span>
+                        <h6 class="f2 ma0" >Apile</h6></a>
                     </div>
                     <ul>Pair programmed to create an interactive Django web app using Python, HTML and CSS. Allowed users to register or login, submit a post, comment on other posts, vote on posts, and edit or delete any of their submissions. Imported fake data and posts using djagno extensions.
                     </ul>
@@ -148,7 +151,7 @@ Tiana Horn
 
                     <div class="tc">
                         <a href="https://github.com/tiana-horn/map-finder" target="_blank" class="no-underline black">
-                        <h6 class="f2 ma0" >Map Finder</h6></a></span>
+                        <h6 class="f2 ma0" >Map Finder</h6></a>
                     </div>
                     <ul>Used Python, Django, Postgis, Leaflet, and Esri to create a web application where users can view data on a map, select the data set they would like to display, and search for any location on the map with zoom capability. Data included satellite imagery, topographic information, and soil quality metrics.
                     </ul>
@@ -159,7 +162,7 @@ Tiana Horn
 
                     <div class="tc">
                         <a href="https://github.com/momentum-cohort-2018-10/mystery-word-tiana-horn/blob/master/mystery_word.py" target="_blank" class="no-underline black">
-                        <h6 class="f2 ma0" >Mystery Word</h6></a></span>
+                        <h6 class="f2 ma0" >Mystery Word</h6></a>
                     </div>
                     <ul>Built a series of Python functions to implement an interactive game of hangman based on a player's chosen difficulty level. 
                     </ul>
@@ -171,7 +174,7 @@ Tiana Horn
 
                     <div class="tc">
                         <a href="https://github.com/momentum-cohort-2018-10/w2-pathfinder-tiana-horn/edit/master/pathfinder.py" target="_blank" class="no-underline black">
-                        <h6 class="f2 ma0" >Elevation Mapping</h6></a></span>
+                        <h6 class="f2 ma0" >Elevation Mapping</h6></a>
                     </div>
                     <ul class="">Used Python to build a program that reads elevation data and draws corresponding maps of various sizes as a .png file.
                     </ul>
@@ -256,6 +259,26 @@ Tiana Horn
                         <h5 li class="f5 mt2"> • Conducted research and community outreach to bring about actionable change for the Black student body at Duke, such as uniform ID carding policies and limiting police presence at social gatherings. 
                         </li>
                 </div>
+
+            <h5 class="white f4 tc fl w-100"> FEATURED IN </h5>
+                    <div class="Row ">
+                        <a target="_blank" class="Column dim" href="https://www.usnews.com/education/best-colleges/articles/2017-09-25/north-carolina-college-road-trip-duke-university"><img src="images/USNews.png" alt="US News and World Report logo" ></a>
+                        <a target="_blank" class="Column dim" href="https://blog.discoverdurham.com/four-innovative-african-american-led-startups-in-durham"><img src="images/Durham.png" alt="Discover Durham logo"  ></a>
+                        <a target="_blank" class="Column dim pl1" href="https://www.wraltechwire.com/2016/02/03/flower-child-remedies-launches-out-of-durham-and-duke-univeristy-startup-community-160203/"><img src="images/WRAL.png" alt="WRAL logo" ></a>
+                        <a target="_blank" class="Column dim" href="https://www.dukechronicle.com/article/2016/08/duke-student-tiana-horn-creates-all-natural-hair-products-in-startup"><img src="images/DukeChronicle.png" alt="Duke Chronicle logo" ></a>
+                    </div>
+
+<footer class="footer mt7 mb0 pt7 pb0 pv4 ph3 ph5-m ph6-l mid-gray">
+  <small class="f6 db tc white">Made by Tiana Horn using JavaScript, CSS, SCSS, Tachyons, and HTML</small>
+  <div class="tc mt3">
+    <a href="#" class="f6 white dib ph2 link mid-gray dim">Portfolio</a>
+    <a href="#" class="f6 white dib ph2 link mid-gray dim">Creative Work</a>
+    <a class="f6 dib ph2 white link mid-gray dim" href="#">CV/Resume</a>
+  </div>
+</footer>
+
+
+
 
 </article>
 </body>
