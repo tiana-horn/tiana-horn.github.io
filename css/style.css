@@ -3,7 +3,14 @@
     font-family: 'Poppins', sans-serif;
     background: white;
     background: linear-gradient(to bottom, white, whitesmoke, blue );
+    display: flex;
+
 }
+.article { 
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
 
 #footer{
   position: absolute;
@@ -162,44 +169,56 @@ main {
 .slide1 {
       background-size: cover;
     animation:fade infinite;
-    animation-duration: 15s;
--webkit-animation:fade 15s infinite;
+    animation-duration: 20s;
+-webkit-animation:fade 20s infinite;
 
 } 
 .slide2 {
       background-size: cover;
     animation:fade2 infinite;
-    animation-duration: 15s;
+    animation-duration: 20s;
 
--webkit-animation:fade2 15s infinite;
+-webkit-animation:fade2 20s infinite;
 }
 .slide3 {
       background-size: cover;
     animation:fade3 infinite;
-    animation-duration: 15s;
+    animation-duration: 20s;
 
--webkit-animation:fade3 15s infinite;
+-webkit-animation:fade3 20s infinite;
 }
 @keyframes fade
 {
   
   0%   {opacity:1}
-  33.333% { opacity: 0}
-  66.666% { opacity: 0}
+  20% { opacity: 0}
+  40% { opacity: 0}
+  60% { opacity: 0}
+  70% { opacity: 0}
+  80% { opacity: 0}
+  90% {opacity: 1}
   100% { opacity: 1}
 }
 @keyframes fade2
 {
   0%   {opacity:0}
-  33.333% { opacity: 1}
-  66.666% { opacity: 0}
+  20% { opacity: 0}
+  40% { opacity: 1}
+  60% { opacity: 0}
+  70% { opacity: 0}
+  80% { opacity: 0}
+  90% {opacity: 0}
   100% { opacity: 0}
 }
 @keyframes fade3
 {
   0%   {opacity:0}
-  33.333% { opacity: 0}
-  66.666% { opacity: 1}
+  20% { opacity: 0}
+  40% { opacity: 0}
+  60% { opacity: 0}
+  70% { opacity: 1}
+  80% { opacity: 0}
+  90% {opacity: 0}
   100% { opacity: 0}
 }
 
@@ -221,6 +240,8 @@ a {
   color: #FFF;
 }
 a:hover {
+  cursor: url(http://tianahorn.com/images/pointer.png), auto ;
+
   opacity: 0.7;
 }
 
