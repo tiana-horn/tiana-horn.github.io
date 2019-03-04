@@ -13,12 +13,14 @@
 
 
 #footer{
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  padding: 5px;;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
 }
 
 .article {
@@ -56,8 +58,8 @@ h6 {
 
 
 .tiana-headshot { 
-    min-width: 250px;
-    min-height: 250px;
+    min-width: 300px;
+    min-height: 300px;
 
 
 }
@@ -101,17 +103,24 @@ h6 {
 
 .proj {
 
-  width: 350px;
+  width: 400px;
   height: 500px;
   margin-right: 70px;
+  margin-left: 70px;
 
+
+}
+
+.even {
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
     min-width: 100px;
     min-height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .skills {
     position: absolute;
