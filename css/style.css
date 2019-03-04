@@ -11,6 +11,26 @@
   margin-left: 100px;
 }
 
+.projects {
+  background: black;
+  width: 70px;
+  height: 70px;
+}
+
+.updown {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.downup {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+
+.hide {
+  opacity: 0.0;
+}
+
 
 #footer{
   position: absolute;
@@ -243,6 +263,7 @@ a {
 a:hover {
   cursor: url(http://tianahorn.com/images/pointer.png), auto ;
   opacity: 0.7;
+  animation-name: bounce;
 }
 
 .menu {
