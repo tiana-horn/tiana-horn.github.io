@@ -12,15 +12,13 @@
 }
 
 
-#footer{
+.footer{
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 5px;;
+  padding: 0px;;
   width: 100%;
-  z-index: 100;
-  position: fixed;
+
 }
 
 .article {
@@ -56,6 +54,10 @@ h6 {
   color: #262626;
 }
 
+.coolgrey {
+  color: #262626;
+
+}
 
 .tiana-headshot { 
     min-width: 300px;
@@ -180,30 +182,30 @@ main {
 .slide1 {
       background-size: cover;
     animation:fade infinite;
-    animation-duration: 20s;
--webkit-animation:fade 20s infinite;
+    animation-duration: 25s;
+-webkit-animation:fade 25s infinite;
 
 } 
 .slide2 {
       background-size: cover;
     animation:fade2 infinite;
-    animation-duration: 20s;
+    animation-duration: 25s;
 
--webkit-animation:fade2 20s infinite;
+-webkit-animation:fade2 25s infinite;
 }
 .slide3 {
       background-size: cover;
     animation:fade3 infinite;
-    animation-duration: 20s;
+    animation-duration: 25s;
 
--webkit-animation:fade3 20s infinite;
+-webkit-animation:fade3 25s infinite;
 }
 .slide4 {
   background-size: cover;
 animation:fade4 infinite;
-animation-duration: 20s;
+animation-duration: 25s;
 
--webkit-animation:fade4 20s infinite;
+-webkit-animation:fade4 25s infinite;
 }
 @keyframes fade
 {
