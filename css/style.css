@@ -77,6 +77,9 @@ h6 {
     border-spacing: 5px; 
 }
 
+.nopacity:hover {
+  opacity: 1;
+}
 .Column
 {
     display: table-cell;
@@ -99,9 +102,15 @@ h6 {
 }
 
 .about {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
 
+}
+
+.edu {
+    width: 250px;
+    height: 250px;
+  
 }
 
 .proj {
