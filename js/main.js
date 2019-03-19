@@ -1,3 +1,48 @@
+let searchButton = document.getElementById('search-button')
+let searchField = document.getElementById('search-field')
+
+//event listeners for search
+searchButton.addEventListener('click', function (event) {
+    searchApi()
+})
+
+searchField.addEventListener('keyup', function (event) {
+    if (event.keyCode === 13) {
+      searchApi()
+    }
+  })
+
+function searchApi (event) {
+    $.ajax({
+        url: 'https://api.civil.services/v1/geolocation/zipcode/apikey=apikey',
+        data: {
+            apikey: 'ADF9577E-4D21-6774-C97E-BFB2464AF4F9',
+            zipcode: searchField.value
+        },
+        dataType: "json",
+        success: function (reps) {
+            let searchResults = document.getElementById('search-results')
+            searchResults.innerHTML= ''
+            
+            let houseRep = document.createElement('div')
+            let repCity = document.createElement('div')
+            let repCounty = document.createElement('div')
+
+            repCity.innerText = reps.city
+            repCounty.innerText = reps.county
+
+            houseRep.appendChild(repCity)
+            houseRep.appendChild(repCounty)
+            searchResults.appendChild(houseRep)
+            
+          
+        }
+    })
+}
+
+
+
+
 // Word Carousel
 
 var TxtRotate = function(el, toRotate, period) {
