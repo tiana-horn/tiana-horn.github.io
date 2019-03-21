@@ -1,9 +1,7 @@
-@media (max-width:640px) {
-  .linked {
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-  }
+.name {
+    text-align: center;
+    font-size: 2.25rem;
+    "tc white f2 fl w-100 f2 pt2  ma0"
 }
 
 .body {
