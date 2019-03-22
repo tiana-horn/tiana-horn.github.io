@@ -1,15 +1,53 @@
 
+
+
 .mobody {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to bottom, white, whitesmoke, black );
     display: flex;
     justify-content: center;
+    width: 100%;
+
+
 
 }
 
 .mo1 {
     display: flex;
+    *zoom: 1;
+    padding-left: var(--spacing-medium);
+    padding-right: var(--spacing-medium);
+    height: 100vh;
+    display: table;
+    width: 100%;
+
 }
+
+@media (--breakpoint-not-small) {
+    .paddy {
+        padding-left: var(--spacing-extra-large);
+        padding-right: var(--spacing-extra-large);
+    }
+
+}
+
+.mo2 {
+    max-width: 16rem;
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-small);
+}
+
+@media (--breakpoint-not-small) {
+   .margns { max-width: 48rem;
+   }
+}
+
+
+.mo3 {
+    text-align: center;
+}
+
 .article { 
   display: flex;
   justify-content: center;
@@ -18,18 +56,19 @@
 
 
 .footer{
+
+  justify-content: space-around;
   bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0px;;
-  width: 100%;
+  margin-left: 12%;
+  padding: 5%;;
+  width: 50%;
 
 }
 
 
 
 .container {
-    border: 5px lightgray;
+    border: 5% lightgray;
    
 }
 h1 {
@@ -61,15 +100,12 @@ h6 {
 
 }
 
-.tiana-headshot { 
+.tiana-moheadshot { 
     max-width: 10px;
-    max-height: 10px;
+    m-height: 10px;
 
 
 }
-.tiana-headshot:hover {
-  src: url(http://tianahorn.com/images/coding.png), auto;
-} 
 
 .Row
 {
@@ -147,15 +183,17 @@ main {
   .floating-menu {
     font-family: "Poppins";
     background: #001A57;
-    padding: 5px;;
-    width: 100%;
+    padding: 7px;;
+    padding-right: 20px;
+    width: 130%;
     z-index: 100;
     position: fixed;
   }
   .floating-menu a, 
   .floating-menu h3 {
     font-size: 0.9em;
-    display: block;
+    display: flex;
+    justify-content: space-around;
     margin: 0 0.5em;
     color: white;
   }
