@@ -4,6 +4,8 @@
     background: white;
     background: linear-gradient(to bottom, white, whitesmoke, blue );
     display: flex;
+    justify-content: center;
+    width: 100%
 
 }
 .article { 
@@ -292,7 +294,7 @@ ul {
 a {
   color: #FFF;
 }
-a:hover {
+a:any-hover {
   cursor: url(http://tianahorn.com/images/pointer.png), auto ;
   opacity: 0.7;
 }

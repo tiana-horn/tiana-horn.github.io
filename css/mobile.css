@@ -12,6 +12,11 @@
 
 }
 
+.moedu {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
 .mo1 {
     display: flex;
     *zoom: 1;
@@ -55,22 +60,16 @@
 }
 
 
+
 .footer{
 
   justify-content: space-around;
   bottom: 0;
-  margin-left: 12%;
   padding: 5%;;
-  width: 50%;
+  width: 100%;
 
 }
 
-
-
-.container {
-    border: 5% lightgray;
-   
-}
 h1 {
     color: #001A57
 }
@@ -100,13 +99,6 @@ h6 {
 
 }
 
-.tiana-moheadshot { 
-    max-width: 10px;
-    m-height: 10px;
-
-
-}
-
 .Row
 {
     display: table;
@@ -115,7 +107,7 @@ h6 {
     border-spacing: 5px; 
 }
 
-.nopacity:hover {
+.nopacity:any-hover {
   opacity: 1;
 }
 .Column
@@ -123,12 +115,7 @@ h6 {
     display: table-cell;
 }
 
-.econtainer {
 
-     width: 50px;
-     height: 250px;
-     margin-top: 140px;    
-}
 
 .exp {
     background-color: whitesmoke;
@@ -137,18 +124,6 @@ h6 {
     margin-right: 0px;
 
 
-}
-
-.about {
-  width: 400px;
-  height: 400px;
-
-}
-
-.edu {
-    width: 250px;
-    height: 250px;
-  
 }
 
 .proj {
@@ -172,20 +147,16 @@ h6 {
     display: flex;
     justify-content: space-evenly;
 }
-.skills {
-    position: absolute;
-    bottom: 10;
 
-}
 main {
-    margin-bottom: 200%;
+    margin-bottom: 100%;
   }
   .floating-menu {
     font-family: "Poppins";
     background: #001A57;
     padding: 7px;;
     padding-right: 20px;
-    width: 130%;
+    width: 100%;
     z-index: 100;
     position: fixed;
   }
@@ -211,8 +182,7 @@ main {
   height: 350px;
   display: flex;
   justify-content: center; 
-  margin-right: 65%;
-  margin-left: 35%;
+  width: 100%;
 
 }
 
@@ -322,7 +292,7 @@ ul {
 a {
   color: #FFF;
 }
-a:hover {
+a:any-hover {
   cursor: url(http://tianahorn.com/images/pointer.png), auto ;
   opacity: 0.7;
 }
