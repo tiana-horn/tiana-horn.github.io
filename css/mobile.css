@@ -1,14 +1,14 @@
 
-
-
-.body {
-    margin-left: 0px;
-    margin-right: 0px;
+.mobody {
     font-family: 'Poppins', sans-serif;
-    background: white;
     background: linear-gradient(to bottom, white, whitesmoke, black );
     display: flex;
+    justify-content: center;
 
+}
+
+.mo1 {
+    display: flex;
 }
 .article { 
   display: flex;
@@ -62,8 +62,8 @@ h6 {
 }
 
 .tiana-headshot { 
-    min-width: 300px;
-    min-height: 300px;
+    max-width: 10px;
+    max-height: 10px;
 
 
 }

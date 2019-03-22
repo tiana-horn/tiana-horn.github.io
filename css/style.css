@@ -1,8 +1,3 @@
-.name {
-    text-align: center;
-    font-size: 2.25rem;
-    "tc white f2 fl w-100 f2 pt2  ma0"
-}
 
 .body {
     font-family: 'Poppins', sans-serif;
@@ -16,6 +11,18 @@
   margin-left: 100px;
 }
 
+.section {
+  margin-top: 50px;
+  padding: 50px;
+}
+
+.marg6 {
+  margin: var(--spacing-extra-extra-large);
+}
+
+.margb {
+  margin-bottom: var(--spacing-extra-small);
+}
 
 .footer{
   bottom: 0;
