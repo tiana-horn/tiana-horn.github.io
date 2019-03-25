@@ -1,37 +1,84 @@
 
+
 .mobody {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to bottom, white, whitesmoke, black );
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 
+
+}
+
+.centerplz {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+
+.mocenter {
+    margin-left: 25%;
+    max-width: 50%;
+    min-width: 50%;
+    margin-right: 25%;
+}
+
+.motech {
+    margin-left: 25%;
+    max-width: 50%;
+    min-width: 50%;
+    margin-right: 25%;
+    margin-bottom: 75px;
 }
 
 .mo1 {
     display: flex;
-}
-.article { 
-  display: flex;
-  justify-content: center;
+    *zoom: 1;
+    padding-left: var(--spacing-medium);
+    padding-right: var(--spacing-medium);
+    height: 100vh;
+    display: table;
+    width: 100%;
 
 }
+
+@media (--breakpoint-not-small) {
+    .paddy {
+        padding-left: var(--spacing-extra-large);
+        padding-right: var(--spacing-extra-large);
+    }
+
+}
+
+.mo2 {
+    max-width: 16rem;
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-small);
+}
+
+@media (--breakpoint-not-small) {
+   .margns { max-width: 48rem;
+   }
+}
+
+
+.mo3 {
+    text-align: center;
+}
+
+
+
 
 
 .footer{
+
+  justify-content: space-around;
   bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0px;;
+  padding: 5%;;
   width: 100%;
 
 }
 
-
-
-.container {
-    border: 5px lightgray;
-   
-}
 h1 {
     color: #001A57
 }
@@ -61,16 +108,6 @@ h6 {
 
 }
 
-.tiana-headshot { 
-    max-width: 10px;
-    max-height: 10px;
-
-
-}
-.tiana-headshot:hover {
-  src: url(http://tianahorn.com/images/coding.png), auto;
-} 
-
 .Row
 {
     display: table;
@@ -79,7 +116,7 @@ h6 {
     border-spacing: 5px; 
 }
 
-.nopacity:hover {
+.nopacity:any-hover {
   opacity: 1;
 }
 .Column
@@ -87,12 +124,7 @@ h6 {
     display: table-cell;
 }
 
-.econtainer {
 
-     width: 50px;
-     height: 250px;
-     margin-top: 140px;    
-}
 
 .exp {
     background-color: whitesmoke;
@@ -101,18 +133,6 @@ h6 {
     margin-right: 0px;
 
 
-}
-
-.about {
-  width: 400px;
-  height: 400px;
-
-}
-
-.edu {
-    width: 250px;
-    height: 250px;
-  
 }
 
 .proj {
@@ -136,27 +156,25 @@ h6 {
     display: flex;
     justify-content: space-evenly;
 }
-.skills {
-    position: absolute;
-    bottom: 10;
 
-}
 main {
-    margin-bottom: 200%;
+    margin-bottom: 100%;
+
   }
   .floating-menu {
     font-family: "Poppins";
     background: #001A57;
     padding: 5px;;
-    width: 100%;
+    width: 120%;
     z-index: 100;
     position: fixed;
   }
   .floating-menu a, 
-  .floating-menu h3 {
-    font-size: 0.9em;
-    display: block;
-    margin: 0 0.5em;
+  .floating-menu h3,
+  .floating-menu h1,
+  .floating-menu h5 {
+    display: flex;
+    justify-content: center;
     color: white;
   }
 
@@ -173,8 +191,7 @@ main {
   height: 350px;
   display: flex;
   justify-content: center; 
-  margin-right: 65%;
-  margin-left: 35%;
+  width: 100%;
 
 }
 
@@ -284,116 +301,7 @@ ul {
 a {
   color: #FFF;
 }
-a:hover {
+a:any-hover {
   cursor: url(http://tianahorn.com/images/pointer.png), auto ;
   opacity: 0.7;
-}
-
-.menu {
-  margin: 0 20px 0 0;
-  padding-right: 1.25em;
-  cursor: pointer;
-  position: relative;
-  width: 30px;
-  height: 50px;
-  text-align: right;
-}
-
-.menu-close {
-  font-size: 0em;
-  opacity: 0;
-  text-align: center;
-  font-weight: bold;
-
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
-}
-
-.menu-close-visible {
-  font-size: 2em;
-  opacity: 1;
-
-  -webkit-transition: 0.2s 0.4s;
-          transition: 0.2s 0.4s;
-}
-
-.menu-global {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  height: 10px; 
-  width: 100%;
-  background-color: #ffffff;
-
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
-}
-
-.menu-global:hover {
-  left: 10px;
-  -webkit-transition: all 0.2s;
-          transition: all 0.2s;
-}
-
-.menu-top {
-  top: 0;
-}
-.menu-middle {
-  top: 18px;
-}
-.menu-bottom {
-  top: 36px;
-}
-
-.menu-text{
-  opacity: 0;
-  font-size: 0em;
-  padding: 10px 0;
-  -webkit-transition: 0.1s;
-          transition: 0.1s;
-}
-
-.expand {
-  box-shadow: rgba(0, 0, 0, 0.1) -2.5px 5px 7.5px, rgba(0, 0, 0, 0.1) 2.5px 5px 7.5px;
-  width: 200px;
-  height: 50px;
-
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.menu-top-expand {
-  top: 50px;
-  background: #FFF8E1;
-
-  -webkit-transition: all 0.5s 0.2s, left 0.1s;
-          transition: all 0.5s 0.2s, left 0.1s;
-}
-
-.menu-middle-expand {
-  top: 100px;
-  background: #FFECB3;
-
-  -webkit-transition: all 0.5s 0.1s, left 0.1s;
-          transition: all 0.5s 0.1s, left 0.1s;
-}
-
-.menu-bottom-expand {
-  top: 150px;
-  height: 100px;
-  background: #FFE082;
-
-  -webkit-transition: all 0.5s, left 0.1s;
-          transition: all 0.5s, left 0.1s;
-}
-
-.menu-text-expand{
-  color: #000000;
-  opacity: 0.8;
-  padding: 10px;
-  font-size: 1.3em;
-  -webkit-transition: all 0.2s 0.7s, font-size 0.1s;
-          transition: all 0.2s 0.7s, font-size 0.1s;
 }

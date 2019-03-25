@@ -1,28 +1,17 @@
 
+
+
 .body {
+
     font-family: 'Poppins', sans-serif;
     background: white;
     background: linear-gradient(to bottom, white, whitesmoke, blue );
     display: flex;
+    justify-content: center;
+
 
 }
-.article { 
-  margin-right: 100px;
-  margin-left: 100px;
-}
 
-.section {
-  margin-top: 50px;
-  padding: 50px;
-}
-
-.marg6 {
-  margin: var(--spacing-extra-extra-large);
-}
-
-.margb {
-  margin-bottom: var(--spacing-extra-small);
-}
 
 .footer{
   bottom: 0;
@@ -77,9 +66,7 @@ h6 {
 
 
 }
-.tiana-headshot:hover {
-  src: url(http://tianahorn.com/images/coding.png), auto;
-} 
+
 
 .Row
 {
@@ -152,7 +139,7 @@ h6 {
 
 }
 main {
-    margin-bottom: 200%;
+    margin-bottom: 100%;
   }
   .floating-menu {
     font-family: "Poppins";
@@ -163,10 +150,11 @@ main {
     position: fixed;
   }
   .floating-menu a, 
-  .floating-menu h3 {
-    font-size: 0.9em;
-    display: block;
-    margin: 0 0.5em;
+  .floating-menu h3,
+  .floating-menu h1,
+  .floating-menu h5 {
+    display: flex;
+    justify-content: center;
     color: white;
   }
 
@@ -294,116 +282,7 @@ ul {
 a {
   color: #FFF;
 }
-a:hover {
+a:any-hover {
   cursor: url(http://tianahorn.com/images/pointer.png), auto ;
   opacity: 0.7;
-}
-
-.menu {
-  margin: 0 20px 0 0;
-  padding-right: 1.25em;
-  cursor: pointer;
-  position: relative;
-  width: 30px;
-  height: 50px;
-  text-align: right;
-}
-
-.menu-close {
-  font-size: 0em;
-  opacity: 0;
-  text-align: center;
-  font-weight: bold;
-
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
-}
-
-.menu-close-visible {
-  font-size: 2em;
-  opacity: 1;
-
-  -webkit-transition: 0.2s 0.4s;
-          transition: 0.2s 0.4s;
-}
-
-.menu-global {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  height: 10px; 
-  width: 100%;
-  background-color: #ffffff;
-
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
-}
-
-.menu-global:hover {
-  left: 10px;
-  -webkit-transition: all 0.2s;
-          transition: all 0.2s;
-}
-
-.menu-top {
-  top: 0;
-}
-.menu-middle {
-  top: 18px;
-}
-.menu-bottom {
-  top: 36px;
-}
-
-.menu-text{
-  opacity: 0;
-  font-size: 0em;
-  padding: 10px 0;
-  -webkit-transition: 0.1s;
-          transition: 0.1s;
-}
-
-.expand {
-  box-shadow: rgba(0, 0, 0, 0.1) -2.5px 5px 7.5px, rgba(0, 0, 0, 0.1) 2.5px 5px 7.5px;
-  width: 200px;
-  height: 50px;
-
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.menu-top-expand {
-  top: 50px;
-  background: #FFF8E1;
-
-  -webkit-transition: all 0.5s 0.2s, left 0.1s;
-          transition: all 0.5s 0.2s, left 0.1s;
-}
-
-.menu-middle-expand {
-  top: 100px;
-  background: #FFECB3;
-
-  -webkit-transition: all 0.5s 0.1s, left 0.1s;
-          transition: all 0.5s 0.1s, left 0.1s;
-}
-
-.menu-bottom-expand {
-  top: 150px;
-  height: 100px;
-  background: #FFE082;
-
-  -webkit-transition: all 0.5s, left 0.1s;
-          transition: all 0.5s, left 0.1s;
-}
-
-.menu-text-expand{
-  color: #000000;
-  opacity: 0.8;
-  padding: 10px;
-  font-size: 1.3em;
-  -webkit-transition: all 0.2s 0.7s, font-size 0.1s;
-          transition: all 0.2s 0.7s, font-size 0.1s;
 }
