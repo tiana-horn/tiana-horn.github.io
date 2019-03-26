@@ -1,4 +1,14 @@
 
+  #container {
+    overflow-x:hidden;
+    width:100%;
+    position:relative;
+    top:7vh;
+    height:53vh;}
+  #main {
+    top:0;
+  }
+
 
 .mobody {
     font-family: 'Poppins', sans-serif;
@@ -165,7 +175,7 @@ main {
     font-family: "Poppins";
     background: #001A57;
     padding: 5px;;
-    width: 120%;
+    width: 100%;
     z-index: 100;
     position: fixed;
   }
