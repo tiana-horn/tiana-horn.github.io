@@ -153,6 +153,16 @@ main {
 
 /* Textimonial Carousel */
 
+.rightquote {
+  margin-right:20%;
+  margin-left:80%;
+}
+
+.leftquote {
+  margin-left:20%;
+  margin-right:80%;
+}
+
 .testimonial {
   margin-right:25%;
   margin-left:25%;
