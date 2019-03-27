@@ -1,4 +1,6 @@
 
+
+
 .body {
 
     font-family: 'Poppins', sans-serif;
@@ -11,11 +13,10 @@
 }
 
 .school {
-  margin-left:25%;
-  width: 50%;
   margin-right:25%;
+  width:50%;
+  margin-left: 25%;
 }
-
 
 .footer{
   bottom: 0;
@@ -64,6 +65,9 @@ h6 {
 
 }
 
+
+
+
 .Row
 {
     display: table;
@@ -89,13 +93,10 @@ h6 {
 
 .exp {
     background-color: whitesmoke;
-    width: 350px;
-    height: 350px;
-    margin-right: 70px;
-    margin-left: 70px;
+    height: 400px;
+
 
 }
-
 
 
 
@@ -269,7 +270,7 @@ ul {
 a {
   color: #FFF;
 }
-a:hover {
+a:any-hover {
   cursor: url(http://tianahorn.com/images/pointer.png), auto ;
   opacity: 0.7;
 }

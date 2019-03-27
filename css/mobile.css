@@ -29,10 +29,17 @@
 }
 
 .about {
+
     width: 100%;
     height: width;
   
   }
+
+.school {
+    margin-right:25%;
+    width:50%;
+    margin-left: 25%;
+}
 
 .mo1 {
     display: flex;
@@ -132,19 +139,9 @@ h6 {
 
 .exp {
     background-color: whitesmoke;
-    width: 350px;
-    height: 350px;
-    margin-right: 0px;
+    height:100%;
+    width:100%;
 
-
-}
-
-.proj {
-
-  width: 400px;
-  height: 450px;
-  margin-right: 70px;
-  margin-left: 70px;
 
 
 }
@@ -298,6 +295,7 @@ span {
 
 ul {
   display: block;
+  width:100%;
   list-style-type: none;
   text-align: left;
 }
