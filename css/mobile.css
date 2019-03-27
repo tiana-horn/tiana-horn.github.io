@@ -10,7 +10,7 @@
 
 .mobody {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, white, whitesmoke, black );
+    background: linear-gradient(to bottom, white, whitesmoke, blue );
     display: flex;
     justify-content: space-around;
 
