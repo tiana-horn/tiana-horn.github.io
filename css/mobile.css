@@ -286,6 +286,7 @@ animation-duration: 25s;
 /* Menu */
 
 .feat {
+    margin-top: 15%;
     margin-left:0%;
     width:100%;
 }
