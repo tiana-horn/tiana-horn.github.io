@@ -83,9 +83,7 @@
 
 .footer{
 
-  justify-content: space-around;
-  bottom: 0;
-  padding: 5%;;
+  margin-bottom: 10%;
   width: 100%;
 
 }
@@ -287,7 +285,10 @@ animation-duration: 25s;
 
 /* Menu */
 
-
+.feat {
+    margin-left:0%;
+    width:100%;
+}
 span {
   display: inline-block;
   vertical-align: middle;
