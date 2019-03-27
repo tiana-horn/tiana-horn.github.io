@@ -1,6 +1,4 @@
 
-
-
 .body {
 
     font-family: 'Poppins', sans-serif;
@@ -10,6 +8,12 @@
     justify-content: center;
 
 
+}
+
+.school {
+  margin-left:25%;
+  width: 50%;
+  margin-right:25%;
 }
 
 
@@ -60,14 +64,6 @@ h6 {
 
 }
 
-.tiana-headshot { 
-    min-width: 300px;
-    min-height: 300px;
-
-
-}
-
-
 .Row
 {
     display: table;
@@ -100,17 +96,8 @@ h6 {
 
 }
 
-.about {
-  width: 400px;
-  height: 400px;
 
-}
 
-.edu {
-    width: 250px;
-    height: 250px;
-  
-}
 
 .proj {
 
@@ -282,7 +269,7 @@ ul {
 a {
   color: #FFF;
 }
-a:any-hover {
+a:hover {
   cursor: url(http://tianahorn.com/images/pointer.png), auto ;
   opacity: 0.7;
 }
