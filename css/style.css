@@ -295,6 +295,7 @@ a:hover {
 .bounce-pad {
   padding:5px;
 }
+
 .bounce-top:hover {
 
   cursor: url(http://tianahorn.com/images/pointer.png), auto ;
@@ -405,4 +406,5 @@ a:hover {
             animation-timing-function: ease-out;
     opacity: 1;
   }
-} */
+}
+
