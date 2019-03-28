@@ -17,7 +17,12 @@
 
 }
 
+.edu {
+    margin-bottom: 0px;
+  }
+
 .centerplz {
+    padding-top: 15%;
     margin-left: 20%;
     margin-right: 20%;
 }
@@ -51,34 +56,6 @@
     width: 100%;
 
 }
-
-@media (--breakpoint-not-small) {
-    .paddy {
-        padding-left: var(--spacing-extra-large);
-        padding-right: var(--spacing-extra-large);
-    }
-
-}
-
-.mo2 {
-    max-width: 16rem;
-    display: flex;
-    justify-content: center;
-    padding: var(--spacing-small);
-}
-
-@media (--breakpoint-not-small) {
-   .margns { max-width: 48rem;
-   }
-}
-
-
-.mo3 {
-    text-align: center;
-}
-
-
-
 
 
 .footer{
