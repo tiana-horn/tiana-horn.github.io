@@ -102,13 +102,11 @@ h6 {
      margin-top: 140px;    
 }
 
+
 .exp {
-    background-color: whitesmoke;
-    height: 100%;
-
-
+  width:350px;
+  height:350px;
 }
-
 
 
 .proj {
@@ -406,5 +404,38 @@ a:hover {
             animation-timing-function: ease-out;
     opacity: 1;
   }
+}
+
+/* Experience references */
+
+.card-container {
+  height: 100%;
+  perspective: 600;
+  position: relative;
+  
+  
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+  
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  background-color: whitesmoke;
+  
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.card .back {
+  background-color: whitesmoke;
+  transform: rotateY(180deg);
 }
 
