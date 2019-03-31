@@ -184,7 +184,7 @@ main {
   position:relative;
 
 }
-.slide1,.slide2,.slide3,.slide4 {
+.slide1,.slide2,.slide3,.slide4,.slide5 {
   width: 50%;
   margin-right:25%;
   margin-left:25%;
@@ -219,51 +219,80 @@ animation-duration: 25s;
 
 -webkit-animation:fade4 25s infinite;
 }
+.slide5 {
+
+  animation:fade5 infinite;
+  animation-duration: 25s;
+  
+  -webkit-animation:fade5 25s infinite;
+}
 @keyframes fade
 {
   0%   {opacity:1}
-  5% {opacity:0}
-  15%   {opacity:0}
+  10%   {opacity:0}
+  20%   {opacity:0}
   30%   {opacity:0}
-  45%   {opacity: 0}
+  40%   {opacity: 0}
+  50%   {opacity: 0}
   60%   {opacity: 0}
-  75%   {opacity: 0}
+  70%   {opacity: 0}
+  80%   {opacity: 0}
   90%   {opacity: 0}
   100% {opacity: 1}
 }
 @keyframes fade2
 {
   0%   {opacity:0}
-  5% {opacity:0}
-  15%   {opacity:1}
+  10%    {opacity:0}
+  20%   {opacity:1}
   30%   {opacity:0}
-  45%   {opacity: 0}
+  40%   {opacity: 0}
+  50%   {opacity: 0}
   60%   {opacity: 0}
-  75%   {opacity: 0}
+  70%   {opacity: 0}
+  80%   {opacity: 0}
   90%   {opacity: 0}
   100% {opacity: 0}
 }
 @keyframes fade3
 {
   0%   {opacity:0}
-  5% {opacity:0}
-  15%   {opacity:0}
+  10%    {opacity:0}
+  20%   {opacity:0}
   30%   {opacity:0}
-  45%   {opacity: 1}
-  60%   {opacity:0}
-  75%   {opacity: 0}
+  40%   {opacity: 1}
+  50%   {opacity: 0}
+  60%   {opacity: 0}
+  70%   {opacity: 0}
+  80%   {opacity: 0}
   90%   {opacity: 0}
   100% {opacity: 0}
 }
 @keyframes fade4
 {
   0%   {opacity:0}
-  5% {opacity:0}
-  15%   {opacity:0}
+  10%    {opacity:0}
+  20%   {opacity:0}
   30%   {opacity:0}
-  45%   {opacity: 0}
+  40%   {opacity: 0}
+  50%   {opacity: 0}
+  60%   {opacity: 1}
+  70%   {opacity: 0}
+  80%   {opacity: 0}
+  90%   {opacity: 0}
+  100% {opacity: 0}
+}
+@keyframes fade5
+{
+  0%   {opacity:0}
+  10%    {opacity:0}
+  20%   {opacity:0}
+  30%   {opacity:0}
+  40%   {opacity: 0}
+  50%   {opacity: 0}
   60%   {opacity: 0}
-  75%   {opacity: 1}
+  70%   {opacity: 0}
+  80%   {opacity: 1}
   90%   {opacity: 0}
   100% {opacity: 0}
 }
@@ -437,5 +466,10 @@ a:hover {
 .card .back {
   background-color: whitesmoke;
   transform: rotateY(180deg);
+}
+
+.avi {
+  max-width: 75px;
+  max-height: 75px;
 }
 
