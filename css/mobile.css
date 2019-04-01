@@ -29,7 +29,7 @@
 
 .hats {
 
-    width: 110%;
+    width: 100%;
 
 }
 
@@ -115,7 +115,8 @@ h6 {
 .exp {
     background-color: whitesmoke;
     height:100%;
-    width:100%;
+    width: 100%;
+
 
 
 
@@ -264,8 +265,8 @@ animation-duration: 25s;
 
 .feat {
     margin-top: 15%;
-    margin-left:0%;
-    width:100%;
+    width:90%;
+
 }
 span {
   display: inline-block;
