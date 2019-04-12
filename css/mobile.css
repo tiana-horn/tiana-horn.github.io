@@ -10,7 +10,7 @@
 
 .mobody {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, white, whitesmoke, blue );
+    background: linear-gradient(to bottom, white, whitesmoke );
     display: flex;
     justify-content: space-around;
 
@@ -97,7 +97,7 @@ h6 {
 .Row
 {
     display: table;
-    width: 100%; 
+    width: 80%; 
     table-layout: auto; 
     border-spacing: 5px; 
 }

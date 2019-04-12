@@ -4,16 +4,25 @@
 .body {
 
     font-family: 'Poppins', sans-serif;
-    background: white;
-    background: linear-gradient(to bottom, white, whitesmoke, blue );
+    background: linear-gradient(to bottom, white, whitesmoke,blue );
     display: flex;
     justify-content: center;
 
 
 }
 
+.presslist {
+  width: 80%;
+
+}
+
 .edu {
   margin-bottom: 20px;
+}
+
+.sideways {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
 .centerplz {
