@@ -418,3 +418,21 @@ a:hover {
   }
 }
 
+/* Modal */
+
+.modal {
+  display: none;
+}
+
+.modal:target {
+  position: absolute;
+  top:0;
+  right:0;
+  background-color: brown;
+}
+
+.modal .close {
+  position: relative;
+  display: block;
+}
+
