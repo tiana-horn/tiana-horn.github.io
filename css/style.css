@@ -16,6 +16,10 @@ width: 80%;
 
 }
 
+.speak {
+  height:275px;
+}
+
 .edu {
   margin-bottom: 20px;
 }
@@ -471,7 +475,8 @@ a:hover {
   justify-content: center;
   background-color: black;
   border-radius: 50%;
-  color: white;
+  color: rgb(32, 5, 5);
   content: "×";
 }
+
 

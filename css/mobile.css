@@ -46,6 +46,14 @@
   
   }
 
+  .speak {
+    height:width;
+  }
+
+.abouttxt {
+  width:250px;
+}  
+
 .school {
     margin-right:25%;
     width:50%;
