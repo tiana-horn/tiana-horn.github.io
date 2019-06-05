@@ -1,4 +1,26 @@
-// Word Carousel
+// Reference Flip
+
+// var card = document.querySelector(".card");
+// var cardback = document.querySelector(".back");
+
+
+// function toggleCard() {
+//     modal.classList.toggle("card .back");
+// }
+
+// function windowOnClick(event) {
+//     if (event.target === card) {
+//         toggleCard();
+//     }
+// }
+
+// back.addEventListener("click", toggleCard);
+// window.addEventListener("click", windowOnClick);
+
+
+
+
+// Open Source Word Carousel  
 
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;

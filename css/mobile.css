@@ -10,10 +10,16 @@
 
 .mobody {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, white, whitesmoke, blue );
+    background: linear-gradient(to bottom, white, whitesmoke );
     display: flex;
     justify-content: space-around;
 
+
+}
+
+.presslist {
+  margin-right: 10%;
+  margin-left: 10%;
 
 }
 
@@ -39,6 +45,12 @@
     height: width;
   
   }
+
+
+
+.abouttxt {
+  width:250px;
+}  
 
 .school {
     margin-right:25%;
@@ -97,7 +109,7 @@ h6 {
 .Row
 {
     display: table;
-    width: 100%; 
+    width: 80%; 
     table-layout: auto; 
     border-spacing: 5px; 
 }
