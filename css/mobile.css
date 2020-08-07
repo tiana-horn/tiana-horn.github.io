@@ -168,7 +168,7 @@ main {
   }
 
   .cursors {
-    cursor: url(http://tianahorn.com/images/cursor.png), auto ;
+    cursor: url(https://tianahorn.com/images/cursor.png), auto ;
   }
 
 
@@ -296,7 +296,7 @@ a {
   color: #FFF;
 }
 a:hover {
-  cursor: url(http://tianahorn.com/images/pointer.png), auto ;
+  cursor: url(https://tianahorn.com/images/pointer.png), auto ;
   opacity: 0.7;
 }
 
