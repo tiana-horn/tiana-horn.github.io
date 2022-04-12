@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<title>
+Tiana Horn
+ </title>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,500,500i,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+
+    <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" media="screen and (max-width: 1024px)" href="css/mobile.css"/>
+
+
+    
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+</head>
+<body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+<div class="container">
+    <div class= " cursors">
+            <nav class="floating-menu flex-wrap flex justify-between fl-100">
+            <h1 class="tc white f2 fl w-100 f2 pt2  ma0"> Tiana M. Horn      </h1>
+            <h5 class="tc white f5 fl w-100 pt0 ma0"> tiana<b>.</b>horn@gmail.com </h5>
+            </nav>
+
+
+    <div class="main">
+        <article class="centerplz">
+
+
+    
+
+
+
+    
+
+
+<h6 class=" mt5 mb1 tc f1"> Web Design Flash Sale </h6>
+    <div class="flex-wrap flex justify-between fl-100 ">
+        <div class=" fl w-25 about  pa3">
+            <h4  class="f4  ma0 tc">$3,000 for 2 custom websites</h4>
+        
+            <p class="tc ma0  mb1 f5">
+                (30% discount - usual price $4,240) 
+            </p>
+            <br>
+            <h4  class="f4  ma0 tc">$1,500 deposit required
+            </h4>
+            <h3 class="tc ma0  mb1 f6">
+                remainder due upon completion 
+            </h3>
+
+            <img class="" src="images/Sale.png/">
+    
+    
+            
+            <div id="smart-button-container">
+                <div style="text-align: center;">
+                  <div id="paypal-button-container"></div>
+                </div>
+              </div>
+            <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+            <script>
+              function initPayPalButton() {
+                paypal.Buttons({
+                  style: {
+                    shape: 'pill',
+                    color: 'blue',
+                    layout: 'horizontal',
+                    label: 'paypal',
+                    
+                  },
+          
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{"description":"$3,000 for 2 custom fully coded websites \n50% deposit required. Remainder due upon completion.","amount":{"currency_code":"USD","value":1500}}]
+                    });
+                  },
+          
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(orderData) {
+                      
+                      // Full available details
+                      console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          
+                      // Show a success message within this page, e.g.
+                      const element = document.getElementById('paypal-button-container');
+                      element.innerHTML = '';
+                      element.innerHTML = '<h3>Thank you for your payment!</h3>';
+          
+                      // Or go to another URL:  actions.redirect('thank_you.html');
+                      
+                    });
+                  },
+          
+                  onError: function(err) {
+                    console.log(err);
+                  }
+                }).render('#paypal-button-container');
+              }
+              initPayPalButton();
+            </script>
+
+
+<br>
+            <ul>
+                <li> • 2 revisions included per website </li>
+                <li> • Up to 10 pages per website </li>
+                <li> • Source code and Admin dashboard included  </li>
+                <li> • Responsive and custom design </li>
+                <li> • Free HTTP hosting provided </li>
+                <li> • SSL/HTTPS hosting provided for $7/month and billed directly from hosting platform (Heroku) </li>
+                <li> • Custom domain not included but can be purchased and added by the customer </li>
+            </ul>
+
+
+<br>
+            <h4  class="f4  ma0 tc"> Timeline</h4>
+            <p class="tc ma0  mb1 f5">
+                30 day turn around for each website, 60 days total
+            </p>
+            <ul>
+                <li> • Work begins upon deposit being recieved </li>
+                <p class="tc ma0  mb1 f5">First 30 days - Website 1 </p>
+                <li> • Week 1: mockup created and approved  </li>
+                <li> • Weeks 2 and 3: first website built </li>
+                <li> • Week 4: feedback and revision requests </li>
+                <p class="tc ma0  mb1 f5">Next 30 days - Website 2 </p>
+                <li> • Week 1: mockup created and approved  </li>
+                <li> • Weeks 2 and 3: second website built </li>
+                <li> • Week 4: feedback and revision requests </li>
+                <p class="tc ma0  mb1 f5">Websites Completed </p>
+                <li> • Domains added, source code sent, and ownership transferred after final payment. 
+                    Final payment due within 7 days of second website completion. </li>
+            </ul>
+
+<br>
+            <h4  class="f4  ma0 tc"> Please note: </h4>
+            <h3 class="tc ma0  mb1 f5">
+                These websites will be coded by a software developer rather than through a generic drag and drop template. 
+                All image content and the majority of text content on each page will be editable through the admin dashboard 
+                which the customer can log in and update at any time. Any changes to styling, navigation menus, or website functionality 
+                will need to be made through code. Customers will be responsible for any coding changes after the 2 included 
+                revision periods for each website. This service is best suited for those who need functionality not available 
+                through drag and drop website templates. 
+
+                Code will be done in Python, Django, CSS, Javascript, and HTML. React may be used as well. 
+                
+                Deposits are non-refundable. Sale ends April 13, 2022 at 5pm EST
+                
+
+            </h3>
+
+        </div>
+
+
+
+    </div>
+
+
+
+<br>
+
+
+
+    </article>
+
+                        <footer class="footer mt5 mb0 pb0 mid-gray">
+                        <small class="f7 db tc black">Made by Tiana Horn using JavaScript, HTML, and CSS</small>
+                            <div class="tc mt2">
+                                <a href="https://tianahorn.com" class="f7 tc black ph1 link mid-gray dim grow">Portfolio</a>
+                              
+                                <a target="_blank" class="f7 h2 tc black link ph1 mid-gray dim grow" href="https://tianahorn.com/files/TianaHornResume.pdf">CV/Resume</a>
+                                  <a href="creativetiana.html" class="f7 black tc ph1 link mid-gray dim grow">More</a>
+                            </div>
+                        </footer>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+</body>
+</html>
+
