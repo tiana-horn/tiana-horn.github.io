@@ -61,59 +61,26 @@ Tiana Horn
             <h3 class="tc ma0  mb1 f6">
                 remainder due upon completion 
             </h3>
+            <br>
+            <br> 
+
+            <h1 class="tc ma0  mb1 school f1">
+
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="YEVWL655JZ3KN">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                    
+            </h1>
 
             <img class="school mb2 " src="images/Sale.png">
             <br>
             <br>
-    
-    
+
             
-            <div id="smart-button-container">
-                <div style="text-align: center;">
-                  <div id="paypal-button-container"></div>
-                </div>
-              </div>
-            <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
-            <script>
-              function initPayPalButton() {
-                paypal.Buttons({
-                  style: {
-                    shape: 'pill',
-                    color: 'blue',
-                    layout: 'horizontal',
-                    label: 'paypal',
-                    
-                  },
-          
-                  createOrder: function(data, actions) {
-                    return actions.order.create({
-                      purchase_units: [{"description":"$3,000 for 2 custom fully coded websites \n50% deposit required. Remainder due upon completion.","amount":{"currency_code":"USD","value":1500}}]
-                    });
-                  },
-          
-                  onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(orderData) {
-                      
-                      // Full available details
-                      console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-          
-                      // Show a success message within this page, e.g.
-                      const element = document.getElementById('paypal-button-container');
-                      element.innerHTML = '';
-                      element.innerHTML = '<h3>Thank you for your payment!</h3>';
-          
-                      // Or go to another URL:  actions.redirect('thank_you.html');
-                      
-                    });
-                  },
-          
-                  onError: function(err) {
-                    console.log(err);
-                  }
-                }).render('#paypal-button-container');
-              }
-              initPayPalButton();
-            </script>
+
 
 
 <br>
@@ -135,6 +102,8 @@ Tiana Horn
             </p>
             <ul class="tc ma0  mb1 f5">
                 <li> • Work begins upon deposit being recieved </li>
+                <li> • Email sent to customer for website specifications </li>
+
                 <br>
 
                 <p class="tc ma0  mb1 f5">First 30 days - Website 1 </p>
