@@ -58,6 +58,12 @@
     margin-left: 25%;
 }
 
+.sale {
+  margin-right:10%;
+  width:90%;
+  margin-left: 10%;
+}
+
 .mo1 {
     display: flex;
     *zoom: 1;
