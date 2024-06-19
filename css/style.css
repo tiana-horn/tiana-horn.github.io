@@ -303,9 +303,8 @@ ul {
 a {
   color: #FFF;
 }
-a:cursor {
-  url(https://tianahorn.com/images/pointer.png), auto ;
-  transform: rotate(-25deg);
+a:hover {
+  cursor: url(https://tianahorn.com/images/pointer.png), auto ;
 
 }
 
