@@ -4,23 +4,23 @@ import { motion } from "framer-motion";
 const pressFeatures = [
   {
     name: "US News & World Report",
-    logo: "https://tianahorn.com/images/USNews.png",
+    logo: "https://tianahorn.com/images/BlackNews.png",
     url: "https://www.usnews.com/education/best-colleges/articles/2017-09-25/north-carolina-college-road-trip-duke-university",
   },
   {
     name: "Duke Chronicle",
-    logo: "https://tianahorn.com/images/DukeChronicle.png",
-    url: "https://www.dukechronicle.com/article/2016/08/duke-student-tiana-horn-creates-all-natural-hair-products-in-startup",
+    logo: "https://tianahorn.com/images/BlackChronicle.png",
+    url: "https://www.dukechronicle.com/article/2016/03/new-bsa-president-horn-looks-to-unite-campus-minority-groups",
   },
   {
     name: "The Triangle Tribune",
-    logo: "https://tianahorn.com/images/LandingTribune.png",
+    logo: "https://tianahorn.com/images/TriangleTribune.png",
     url: "https://now.dirxion.com/Triangle_Tribune/library/Triangle_Tribune_02_25_2018.pdf#page=2&zoom=80",
   },
   {
     name: "WRAL TechWire",
-    logo: "https://tianahorn.com/images/WRAL.png",
-    url: "https://www.wraltechwire.com/2016/02/03/flower-child-remedies-launches-out-of-durham-and-duke-univeristy-startup-community-160203/",
+    logo: "https://tianahorn.com/images/BlackToday.png",
+    url: "https://today.duke.edu/2016/10/quad-dedication-brings-julian-abele-out-shadows",
   },
 ];
 
