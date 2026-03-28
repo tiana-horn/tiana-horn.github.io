@@ -1,6 +1,15 @@
 import AnimatedSection from "./AnimatedSection";
 
 const experiences = [
+    {
+    company: "favored.digital",
+    location: "Durham, NC",
+    role: "Lead Web Developer & Cofounder",
+    period: "September 2025 - Present",
+    highlights: [
+      "With over 7 years of experience in software engineering and web development, I specialize in creating digital experiences that not only look exceptional but also drive real business results. My approach combines technical excellence with a deep understanding of each industry I serve.",
+    ],
+  },
   {
     company: "Favored Paper",
     location: "Durham, NC",

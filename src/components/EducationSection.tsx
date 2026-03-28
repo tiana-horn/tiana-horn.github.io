@@ -7,7 +7,7 @@ const EducationSection = () => {
       program: "Python Full-Stack Development",
       date: "January 2019",
       logo: "https://tianahorn.com/images/momentum-logo.png",
-      url: "https://www.momentumlearn.com/",
+      url: "#",
     },
     {
       name: "Duke University",
