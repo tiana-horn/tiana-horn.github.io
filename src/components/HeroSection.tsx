@@ -51,7 +51,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-2xl rotate-3 scale-105" />
               <motion.img
-                src="https://tianahorn.com/images/tiana.jpg"
+                src="https://tianahorn.com/images/BSA.png"
                 alt="Tiana M. Horn"
                 className="relative rounded-2xl w-72 md:w-80 object-cover shadow-2xl shadow-primary/10"
                 whileHover={{ scale: 1.02 }}
