@@ -23,7 +23,7 @@ const Navbar = () => {
         <Link to="/" className="font-heading text-xl font-bold tracking-tight text-foreground">
           Tiana M. <span className="text-primary">Horn</span>
         </Link>
-        <p> tiana.horn@gmail.com</p>
+        <p className="font-heading text-xl font-bold tracking-tight text-foreground" > tiana.horn@gmail.com</p>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
