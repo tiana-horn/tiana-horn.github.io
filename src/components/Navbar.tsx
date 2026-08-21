@@ -55,7 +55,7 @@ const Navbar = () => {
             GitHub
           </a>
           <a
-            href="https://tianahorn.com/files/HornTianaResume.pdf"
+            href="https://tianahorn.com/files/TianaHorn_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 rounded-lg bg-primary text-primary-foreground font-heading text-sm font-medium hover:opacity-90 transition-opacity"
@@ -90,7 +90,7 @@ const Navbar = () => {
             ))}
             <a href="https://www.linkedin.com/in/tiana-horn/" target="_blank" rel="noopener noreferrer" className="font-heading text-sm text-muted-foreground">LinkedIn</a>
             <a href="https://github.com/tiana-horn" target="_blank" rel="noopener noreferrer" className="font-heading text-sm text-muted-foreground">GitHub</a>
-            <a href="https://tianahorn.com/files/HornTianaResume.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-primary text-primary-foreground font-heading text-sm font-medium text-center">Resume</a>
+            <a href="https://tianahorn.com/files/TianaHorn_Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-primary text-primary-foreground font-heading text-sm font-medium text-center">Resume</a>
           </div>
         </motion.div>
       )}

@@ -36,7 +36,7 @@ const HeroSection = () => {
                   Connect on LinkedIn
                 </a>
                 <a
-                  href="https://tianahorn.com/files/HornTianaResume.pdf"
+                  href="https://tianahorn.com/files/TianaHorn_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 rounded-lg border border-border text-foreground font-heading text-sm font-medium hover:border-primary hover:text-primary transition-all hover:scale-105"
