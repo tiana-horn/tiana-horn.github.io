@@ -24,7 +24,7 @@ const experiences = [
     company: "Color Of Change",
     location: "Remote",
     role: "Full-Stack Software Engineer",
-    period: "April 2022 - January 2025",
+    period: "April 2022 - December 2024",
     highlights: [
       "Architect and develop backend database and REST API for a platform to manage social justice campaigns.",
       "Discovered the cause and code fix for accessibility issues affecting millions of donor emails.",
