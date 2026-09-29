@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5ead8;--sf:#ebddc5;--card:#f9f4ed;--ink:#201e1d;--mut:#645c50;--ac:#c67139;--ac2:#7a8a5e;--acsoft:#ffe1d0;--ac2soft:#e1eecc;--onac:#201e1d;--r:28px;}
+html,body{margin:0;overflow:hidden}
+*{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--ac,#c67139)}
+::selection{background:#ffc6a5}
+:focus-visible{outline:2px solid #c67139;outline-offset:2px}
+</style>
+</helmet>
+<div ref="{{ rootRef }}" onMouseMove="{{ onMove }}" style="--cx:60vw;--cy:50vh;--mx:0;--my:0;position:relative;width:100vw;height:100vh;min-height:720px;overflow:hidden;background:var(--bg);color:var(--ink);font-family:Cardo,Georgia,serif;font-size:15px;line-height:1.5;transition:background-color .6s,color .6s;user-select:none">
+
+<div style="position:absolute;width:640px;height:640px;border-radius:50%;left:calc(var(--cx) - 320px);top:calc(var(--cy) - 320px);background:radial-gradient(circle,var(--acsoft),transparent 65%);transition:left .9s cubic-bezier(.2,.8,.2,1),top .9s cubic-bezier(.2,.8,.2,1);pointer-events:none"></div>
+<div style="position:absolute;right:-120px;top:-80px;width:520px;height:520px;border-radius:50%;background:var(--ac);opacity:.9;transform:translate(calc(var(--mx) * -30px),calc(var(--my) * -30px));transition:transform .6s,background-color .6s;pointer-events:none"></div>
+<div style="position:absolute;left:34%;bottom:-160px;width:380px;height:380px;border-radius:50%;background:var(--ac2);transform:translate(calc(var(--mx) * 40px),calc(var(--my) * 40px));transition:transform .7s,background-color .6s;pointer-events:none"></div>
+<div style="position:absolute;right:4vw;bottom:92px;font-family:'Bebas Neue',sans-serif;font-size:clamp(90px,13vw,210px);line-height:.85;letter-spacing:0;color:var(--sf);text-align:right;transform:translate(calc(var(--mx) * 16px),calc(var(--my) * 10px));transition:transform .6s,color .6s;pointer-events:none">Tiana<br>Horn</div>
+
+<div style="position:absolute;top:0;left:0;right:0;height:44px;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 16px 0 20px;background:color-mix(in srgb,var(--card) 80%,transparent);backdrop-filter:blur(14px);font-weight:600;font-size:14px;transition:background-color .6s">
+<div style="display:flex;align-items:center;gap:22px"><span style="font-family:'Bebas Neue',sans-serif;font-size:18px;font-weight:400">tiana.os</span><span style="color:var(--mut)">AI-powered websites, made with care</span></div>
+<div style="display:flex;align-items:center;gap:6px">
+<span style="color:var(--mut);margin-right:4px">Restyle</span>
+<sc-for list="{{ themeBtns }}" as="t" hint-placeholder-count="3">
+<button onClick="{{ t.pick }}" style="border:0;cursor:pointer;display:flex;align-items:center;gap:7px;font:700 13px Cardo,Georgia,serif;padding:5px 12px;border-radius:999px;background:{{ t.bg }};color:{{ t.fg }}"><span style="width:10px;height:10px;border-radius:50%;background:{{ t.dot }}"></span>{{ t.label }}</button>
+</sc-for>
+<button onClick="{{ tidy }}" style="border:0;cursor:pointer;font:700 13px Cardo,Georgia,serif;padding:5px 12px;border-radius:999px;background:transparent;color:var(--ink);margin-left:8px" style-hover="background:var(--sf)">Tidy up</button>
+<span style="margin-left:10px;font-family:'JetBrains Mono',monospace;font-size:13px">{{ clock }}</span>
+</div>
+</div>
+
+<div style="position:absolute;top:68px;left:20px;z-index:5;display:flex;flex-direction:column;gap:14px">
+<sc-for list="{{ icons }}" as="ic" hint-placeholder-count="8">
+<button onClick="{{ ic.open }}" style="border:0;background:transparent;cursor:pointer;width:96px;display:flex;flex-direction:column;align-items:center;gap:6px;font:700 13px Cardo,Georgia,serif;color:var(--ink);padding:6px;border-radius:18px" style-hover="background:color-mix(in srgb,var(--card) 70%,transparent)">
+<span style="width:54px;height:54px;border-radius:{{ ic.shape }};background:{{ ic.color }};display:grid;place-items:center;font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--card);box-shadow:0 3px 10px rgba(46,43,37,.16);transition:background-color .6s">{{ ic.glyph }}</span>{{ ic.label }}
+</button>
+</sc-for>
+</div>
+
+<sc-if value="{{ w.hello.open }}" hint-placeholder-val="{{ true }}">
+<div onPointerDown="{{ focus.hello }}" style="position:absolute;left:{{ w.hello.x }}px;top:{{ w.hello.y }}px;z-index:{{ w.hello.z }};width:560px;background:var(--card);border-radius:var(--r);box-shadow:0 12px 32px rgba(46,43,37,.22);overflow:hidden;transition:background-color .6s,border-radius .6s">
+<div onPointerDown="{{ drag.hello }}" style="display:flex;align-items:center;gap:8px;padding:12px 16px;cursor:grab;background:var(--sf);transition:background-color .6s"><button onClick="{{ close.hello }}" style="width:14px;height:14px;border-radius:50%;border:0;padding:0;background:var(--ac);cursor:pointer"></button><span style="width:14px;height:14px;border-radius:50%;background:var(--ac2)"></span><span style="flex:1;text-align:center;font-weight:700;font-size:13px;color:var(--mut)">hello.txt</span><span style="width:36px"></span></div>
+<div style="padding:32px;display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center">
+<div style="width:150px;height:150px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 8px var(--ac2soft)"><img src="assets/tiana.jpg" alt="Tiana Horn" draggable="false" style="width:100%;height:100%;object-fit:cover;filter:saturate(.6) contrast(.85) brightness(1.1) opacity(.94)"></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'Bebas Neue',sans-serif;font-size:40px;line-height:1;letter-spacing:.01em">Hey, I'm Tiana.</div>
+<div style="color:var(--mut);font-size:16px;text-wrap:pretty">I build custom websites with AI and a lot of heart. This desktop is yours, so open things, drag them around and make yourself at home.</div>
+</div>
+<div style="grid-column:1/3;display:flex;gap:10px;flex-wrap:wrap">
+<button onClick="{{ open.contact }}" style="border:0;cursor:pointer;background:var(--ac);color:var(--onac);font:700 15px Cardo,Georgia,serif;padding:12px 22px;border-radius:999px" style-hover="transform:translateY(-2px)">Start a project</button>
+<button onClick="{{ open.work }}" style="border:0;cursor:pointer;background:var(--sf);color:var(--ink);font:700 15px Cardo,Georgia,serif;padding:12px 22px;border-radius:999px" style-hover="transform:translateY(-2px)">See my work</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ w.work.open }}" hint-placeholder-val="{{ true }}">
+<div onPointerDown="{{ focus.work }}" style="position:absolute;left:{{ w.work.x }}px;top:{{ w.work.y }}px;z-index:{{ w.work.z }};width:500px;background:var(--card);border-radius:var(--r);box-shadow:0 12px 32px rgba(46,43,37,.22);overflow:hidden;transition:background-color .6s,border-radius .6s">
+<div onPointerDown="{{ drag.work }}" style="display:flex;align-items:center;gap:8px;padding:12px 16px;cursor:grab;background:var(--sf)"><button onClick="{{ close.work }}" style="width:14px;height:14px;border-radius:50%;border:0;padding:0;background:var(--ac);cursor:pointer"></button><span style="width:14px;height:14px;border-radius:50%;background:var(--ac2)"></span><span style="flex:1;text-align:center;font-weight:700;font-size:13px;color:var(--mut)">Work — 4 items</span><span style="width:36px"></span></div>
+<div style="padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<sc-for list="{{ work }}" as="p" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:8px;padding:8px;border-radius:20px;transition:background-color .2s,transform .25s" style-hover="background:var(--sf);transform:translateY(-3px)">
+<div style="aspect-ratio:4/3;border-radius:16px;background:repeating-linear-gradient(135deg,var(--sf) 0 10px,var(--bg) 10px 20px);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut)">{{ p.shot }}</div>
+<div style="font-weight:700">{{ p.title }}</div>
+<div style="align-self:flex-start;font-size:12px;font-weight:700;background:var(--ac2soft);padding:2px 10px;border-radius:999px">{{ p.tag }}</div>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ w.process.open }}" hint-placeholder-val="{{ true }}">
+<div onPointerDown="{{ focus.process }}" style="position:absolute;left:{{ w.process.x }}px;top:{{ w.process.y }}px;z-index:{{ w.process.z }};width:380px;background:var(--card);border-radius:var(--r);box-shadow:0 12px 32px rgba(46,43,37,.22);overflow:hidden;transition:background-color .6s,border-radius .6s">
+<div onPointerDown="{{ drag.process }}" style="display:flex;align-items:center;gap:8px;padding:12px 16px;cursor:grab;background:var(--sf)"><button onClick="{{ close.process }}" style="width:14px;height:14px;border-radius:50%;border:0;padding:0;background:var(--ac);cursor:pointer"></button><span style="width:14px;height:14px;border-radius:50%;background:var(--ac2)"></span><span style="flex:1;text-align:center;font-weight:700;font-size:13px;color:var(--mut)">Our process — tap to tick</span><span style="width:36px"></span></div>
+<div style="padding:18px;display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+<button onClick="{{ s.toggle }}" style="border:0;cursor:pointer;text-align:left;display:grid;grid-template-columns:30px 1fr;gap:12px;padding:12px;border-radius:18px;background:{{ s.bg }};color:var(--ink);font:15px Cardo,Georgia,serif;transition:background-color .3s">
+<span style="width:26px;height:26px;border-radius:50%;border:2.5px solid var(--ac2);background:{{ s.dot }};display:grid;place-items:center;color:var(--card);font-weight:700;font-size:14px;transition:background-color .3s">{{ s.mark }}</span>
+<span><span style="display:block;font-weight:700">{{ s.title }}</span><span style="display:block;color:var(--mut);font-size:14px">{{ s.body }}</span></span>
+</button>
+</sc-for>
+<div style="padding:8px 12px 2px;font-weight:700;color:var(--ac2);font-size:14px">{{ progressLabel }}</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ w.words.open }}" hint-placeholder-val="{{ true }}">
+<div onPointerDown="{{ focus.words }}" style="position:absolute;left:{{ w.words.x }}px;top:{{ w.words.y }}px;z-index:{{ w.words.z }};width:300px;background:var(--acsoft);border-radius:var(--r);box-shadow:0 12px 32px rgba(46,43,37,.22);transform:rotate(3deg);transition:background-color .6s,border-radius .6s">
+<div onPointerDown="{{ drag.words }}" style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px 0;cursor:grab"><span style="font-weight:700;font-size:13px;color:var(--mut)">Kind words · {{ quoteNum }}</span><button onClick="{{ close.words }}" style="border:0;background:transparent;cursor:pointer;font:700 16px Cardo,Georgia,serif;color:var(--mut)">×</button></div>
+<div style="padding:12px 22px 22px;display:flex;flex-direction:column;gap:14px">
+<div style="font-family:'Bebas Neue',sans-serif;font-size:21px;line-height:1.2">“{{ quote.text }}”</div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;font-size:13px">{{ quote.who }}<br><span style="font-weight:400;color:var(--mut)">{{ quote.role }}</span></span><button onClick="{{ nextQuote }}" style="border:0;cursor:pointer;background:var(--ink);color:var(--bg);font:700 13px Cardo,Georgia,serif;padding:8px 14px;border-radius:999px">Next →</button></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ w.about.open }}" hint-placeholder-val="{{ false }}">
+<div onPointerDown="{{ focus.about }}" style="position:absolute;left:{{ w.about.x }}px;top:{{ w.about.y }}px;z-index:{{ w.about.z }};width:460px;background:var(--card);border-radius:var(--r);box-shadow:0 12px 32px rgba(46,43,37,.22);overflow:hidden;transition:background-color .6s,border-radius .6s">
+<div onPointerDown="{{ drag.about }}" style="display:flex;align-items:center;gap:8px;padding:12px 16px;cursor:grab;background:var(--sf)"><button onClick="{{ close.about }}" style="width:14px;height:14px;border-radius:50%;border:0;padding:0;background:var(--ac);cursor:pointer"></button><span style="width:14px;height:14px;border-radius:50%;background:var(--ac2)"></span><span style="flex:1;text-align:center;font-weight:700;font-size:13px;color:var(--mut)">About Tiana</span><span style="width:36px"></span></div>
+<div style="padding:28px;display:flex;flex-direction:column;gap:14px">
+<div style="font-family:'Bebas Neue',sans-serif;font-size:30px;line-height:1.05">Seven years of code, one very human approach.</div>
+<div style="color:var(--mut);text-wrap:pretty">I've built software for e-commerce brands, non-profits, government agencies and wedding businesses. Now I run favored.digital, where AI does the heavy lifting and I bring the taste, the questions and the follow-through.</div>
+<div style="display:flex;gap:10px"><a href="https://www.linkedin.com/in/tiana-horn/" target="_blank" style="background:var(--sf);padding:8px 16px;border-radius:999px;font-weight:700;font-size:14px">LinkedIn ↗</a><a href="https://favored.digital" target="_blank" style="background:var(--sf);padding:8px 16px;border-radius:999px;font-weight:700;font-size:14px">favored.digital ↗</a></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ w.services.open }}" hint-placeholder-val="{{ false }}">
+<div onPointerDown="{{ focus.services }}" style="position:absolute;left:{{ w.services.x }}px;top:{{ w.services.y }}px;z-index:{{ w.services.z }};width:440px;background:var(--card);border-radius:var(--r);box-shadow:0 12px 32px rgba(46,43,37,.22);overflow:hidden;transition:background-color .6s,border-radius .6s">
+<div onPointerDown="{{ drag.services }}" style="display:flex;align-items:center;gap:8px;padding:12px 16px;cursor:grab;background:var(--sf)"><button onClick="{{ close.services }}" style="width:14px;height:14px;border-radius:50%;border:0;padding:0;background:var(--ac);cursor:pointer"></button><span style="width:14px;height:14px;border-radius:50%;background:var(--ac2)"></span><span style="flex:1;text-align:center;font-weight:700;font-size:13px;color:var(--mut)">Services</span><span style="width:36px"></span></div>
+<div style="padding:18px;display:flex;flex-direction:column;gap:8px">
+<div style="padding:14px 16px;border-radius:18px;background:var(--acsoft)"><div style="font-weight:700">AI-powered site builds</div><div style="color:var(--mut);font-size:14px">Custom sites designed and coded with AI, then refined by hand.</div></div>
+<div style="padding:14px 16px;border-radius:18px;background:var(--ac2soft)"><div style="font-weight:700">Brand &amp; UI design</div><div style="color:var(--mut);font-size:14px">Interfaces that feel intuitive and look like you.</div></div>
+<div style="padding:14px 16px;border-radius:18px;background:var(--sf)"><div style="font-weight:700">Care &amp; growth</div><div style="color:var(--mut);font-size:14px">Updates, security and new features, handled for you.</div></div>
+<a href="Video%20and%20Social.dc.html" style="padding:14px 16px;border-radius:18px;background:var(--ac);color:var(--onac);display:flex;justify-content:space-between;align-items:center" style-hover="color:var(--onac);transform:translateY(-2px)"><span><span style="display:block;font-weight:700">Video &amp; social content</span><span style="font-size:14px">Short-form edits that stop the scroll</span></span><span style="font-weight:700">Open →</span></a>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ w.contact.open }}" hint-placeholder-val="{{ false }}">
+<div onPointerDown="{{ focus.contact }}" style="position:absolute;left:{{ w.contact.x }}px;top:{{ w.contact.y }}px;z-index:{{ w.contact.z }};width:420px;background:var(--ink);color:var(--bg);border-radius:var(--r);box-shadow:0 12px 32px rgba(46,43,37,.3);overflow:hidden;transition:background-color .6s,border-radius .6s">
+<div onPointerDown="{{ drag.contact }}" style="display:flex;align-items:center;gap:8px;padding:12px 16px;cursor:grab"><button onClick="{{ close.contact }}" style="width:14px;height:14px;border-radius:50%;border:0;padding:0;background:var(--ac);cursor:pointer"></button><span style="width:14px;height:14px;border-radius:50%;background:var(--ac2)"></span><span style="flex:1;text-align:center;font-weight:700;font-size:13px;opacity:.7">New message to Tiana</span><span style="width:36px"></span></div>
+<div style="padding:8px 24px 24px;display:flex;flex-direction:column;gap:10px;user-select:text">
+<sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+<div style="font-family:'Bebas Neue',sans-serif;font-size:28px;line-height:1.05;margin-bottom:4px">Let's make something that feels like you.</div>
+<input placeholder="Your name" style="font:15px Cardo,Georgia,serif;padding:12px 18px;border-radius:999px;border:0;background:var(--bg);color:var(--ink)">
+<input placeholder="Email" style="font:15px Cardo,Georgia,serif;padding:12px 18px;border-radius:999px;border:0;background:var(--bg);color:var(--ink)">
+<textarea rows="3" placeholder="Tell me about your project…" style="font:15px Cardo,Georgia,serif;padding:14px 18px;border-radius:22px;border:0;background:var(--bg);color:var(--ink);resize:none"></textarea>
+<button onClick="{{ send }}" style="border:0;cursor:pointer;background:var(--ac);color:var(--onac);font:700 15px Cardo,Georgia,serif;padding:13px;border-radius:999px">Send it over</button>
+<div style="font-size:13px;opacity:.7">tiana@favored.digital · I reply within 24 hours</div>
+</sc-if>
+<sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+<div style="padding:28px 0;display:flex;flex-direction:column;gap:8px"><div style="font-family:'Bebas Neue',sans-serif;font-size:30px">Message sent!</div><div style="opacity:.8">Thank you. I'll get back to you within 24 hours.</div></div>
+</sc-if>
+</div>
+</div>
+</sc-if>
+
+<div style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:1000;display:flex;gap:6px;padding:8px;border-radius:999px;background:color-mix(in srgb,var(--card) 82%,transparent);backdrop-filter:blur(14px);box-shadow:0 12px 32px rgba(46,43,37,.2);transition:background-color .6s">
+<sc-for list="{{ icons }}" as="ic" hint-placeholder-count="8">
+<button onClick="{{ ic.open }}" title="{{ ic.label }}" style="position:relative;border:0;cursor:pointer;width:46px;height:46px;border-radius:{{ ic.shape }};background:{{ ic.color }};color:var(--card);font-family:'Bebas Neue',sans-serif;font-size:19px;transition:transform .25s cubic-bezier(.2,1.5,.4,1),background-color .6s" style-hover="transform:translateY(-10px) scale(1.18)">{{ ic.glyph }}<span style="position:absolute;left:50%;bottom:-6px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--ink);opacity:{{ ic.dot }}"></span></button>
+</sc-for>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;organic&quot;,&quot;midnight&quot;,&quot;garden&quot;],&quot;default&quot;:&quot;organic&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:0,&quot;max&quot;:2,&quot;step&quot;:0.1,&quot;default&quot;:1,&quot;tsType&quot;:&quot;number&quot;}}">
+const THEMES = {
+  organic: { label: 'Organic', bg: '#f5ead8', sf: '#ebddc5', card: '#f9f4ed', ink: '#201e1d', mut: '#645c50', ac: '#c67139', ac2: '#7a8a5e', acsoft: '#ffe1d0', ac2soft: '#e1eecc', onac: '#201e1d', r: '28px' },
+  midnight: { label: 'Midnight', bg: '#2e2b25', sf: '#474238', card: '#3a362f', ink: '#f9f4ed', mut: '#c0b6a5', ac: '#f6a06b', ac2: '#aebf92', acsoft: '#643312', ac2soft: '#3d472b', onac: '#2e2b25', r: '14px' },
+  garden: { label: 'Garden', bg: '#f0fae1', sf: '#e1eecc', card: '#f9fcf2', ink: '#272e1b', mut: '#56633f', ac: '#b2622d', ac2: '#56633f', acsoft: '#ffe1d0', ac2soft: '#ccdbb2', onac: '#fff2eb', r: '48px' }
+};
+const LAYOUT = {
+  hello: { x: 150, y: 76, open: true },
+  work: { x: 740, y: 120, open: true },
+  process: { x: 330, y: 420, open: true },
+  words: { x: 1010, y: 470, open: true },
+  about: { x: 240, y: 130, open: false },
+  services: { x: 600, y: 90, open: false },
+  contact: { x: 820, y: 150, open: false }
+};
+const ICONS = [
+  { id: 'hello', label: 'Hello', glyph: 'hi', color: 'var(--ac)', shape: '50%' },
+  { id: 'about', label: 'About', glyph: 'T', color: 'var(--ac2)', shape: '40% 60% 55% 45%' },
+  { id: 'services', label: 'Services', glyph: '✦', color: 'var(--ac)', shape: '18px' },
+  { id: 'work', label: 'Work', glyph: 'W', color: 'var(--ac2)', shape: '50%' },
+  { id: 'process', label: 'Process', glyph: '✓', color: 'var(--ac)', shape: '60% 40% 45% 55%' },
+  { id: 'words', label: 'Kind words', glyph: '“', color: 'var(--ac2)', shape: '18px' },
+  { id: 'contact', label: 'Contact', glyph: '@', color: 'var(--ink)', shape: '50%' },
+  { id: 'video', label: 'Video', glyph: '▶', color: 'var(--ac)', shape: '45% 55% 60% 40%', href: 'Video%20and%20Social.dc.html' }
+];
+const STEPS = [
+  { title: 'We talk it through', body: 'Your business, in plain words.' },
+  { title: 'I shape the structure', body: 'AI drafts it in minutes, and I tune it.' },
+  { title: 'We make it yours', body: 'Color, type and voice, refined together.' },
+  { title: 'Launch, then care', body: 'Tested, shipped and looked after.' }
+];
+const WORK = [
+  { tag: 'E-commerce', title: 'Skincare shop relaunch', shot: 'storefront' },
+  { tag: 'Non-profit', title: 'Volunteer hub', shot: 'dashboard' },
+  { tag: 'Government', title: 'Compliance portal', shot: 'portal' },
+  { tag: 'Weddings', title: 'Planner booking site', shot: 'wedding site' }
+];
+const QUOTES = [
+  { text: 'Tiana turned my rambling voice memo into a site that sounds more like me than I do.', who: 'Client name', role: 'Founder, small business' },
+  { text: 'We launched in three weeks. Our old agency quoted us four months.', who: 'Client name', role: 'Director, non-profit' },
+  { text: 'She was patient with every question and still delivered early.', who: 'Client name', role: 'Owner, wedding studio' }
+];
+const clone = () => Object.fromEntries(Object.entries(LAYOUT).map(([k, v], i) => [k, { ...v, z: 10 + i }]));
+
+class Component extends DCLogic {
+  state = { theme: this.props.theme ?? 'organic', w: clone(), top: 20, checked: [true, true, false, false], q: 0, sent: false, clock: '' };
+  rootRef = React.createRef();
+
+  componentDidMount() {
+    this._lastPropTheme = this.props.theme;
+    this.applyTheme();
+    const tick = () => this.setState({ clock: new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) });
+    tick(); this.clk = setInterval(tick, 20000);
+    this.onPM = e => {
+      if (!this.dragging) return;
+      const { id, ox, oy } = this.dragging;
+      const x = Math.max(-200, e.clientX - ox), y = Math.max(44, e.clientY - oy);
+      this.setState(s => ({ w: { ...s.w, [id]: { ...s.w[id], x, y } } }));
+    };
+    this.onPU = () => { this.dragging = null; };
+    window.addEventListener('pointermove', this.onPM);
+    window.addEventListener('pointerup', this.onPU);
+  }
+  componentWillUnmount() { clearInterval(this.clk); window.removeEventListener('pointermove', this.onPM); window.removeEventListener('pointerup', this.onPU); }
+  componentDidUpdate() {
+    const t = this.props.theme;
+    if (t && t !== this._lastPropTheme) { this._lastPropTheme = t; this.applyTheme(t); this.setState({ theme: t }); }
+  }
+  applyTheme(key) {
+    const el = this.rootRef.current, t = THEMES[key || this.state.theme] || THEMES.organic; if (!el) return;
+    ['bg','sf','card','ink','mut','ac','ac2','acsoft','ac2soft','onac','r'].forEach(k => el.style.setProperty('--' + k, t[k]));
+  }
+  raise(id, patch = {}) {
+    this.setState(s => ({ top: s.top + 1, w: { ...s.w, [id]: { ...s.w[id], ...patch, z: s.top + 1 } } }));
+  }
+
+  renderVals() {
+    const { w, theme, checked, q } = this.state;
+    const ids = Object.keys(LAYOUT);
+    const map = fn => Object.fromEntries(ids.map(id => [id, fn(id)]));
+    const done = checked.filter(Boolean).length;
+    return {
+      rootRef: this.rootRef, w, clock: this.state.clock,
+      onMove: e => {
+        const el = this.rootRef.current; if (!el) return;
+        const m = this.props.motion ?? 1;
+        el.style.setProperty('--cx', e.clientX + 'px'); el.style.setProperty('--cy', e.clientY + 'px');
+        el.style.setProperty('--mx', ((e.clientX / window.innerWidth - .5) * 2 * m).toFixed(3));
+        el.style.setProperty('--my', ((e.clientY / window.innerHeight - .5) * 2 * m).toFixed(3));
+      },
+      drag: map(id => e => {
+        if (e.target.tagName === 'BUTTON') return;
+        this.dragging = { id, ox: e.clientX - w[id].x, oy: e.clientY - w[id].y };
+      }),
+      focus: map(id => () => { if (w[id].z !== this.state.top) this.raise(id); }),
+      close: map(id => e => { e.stopPropagation(); this.setState(s => ({ w: { ...s.w, [id]: { ...s.w[id], open: false } } })); }),
+      open: map(id => () => this.raise(id, { open: true })),
+      icons: ICONS.map(ic => ({
+        ...ic, dot: ic.id !== 'video' && w[ic.id]?.open ? 0.7 : 0,
+        open: () => { if (ic.href) window.location.href = ic.href; else this.raise(ic.id, { open: true }); }
+      })),
+      tidy: () => this.setState({ w: clone(), top: 20 }),
+      steps: STEPS.map((s, i) => ({
+        ...s, bg: checked[i] ? 'var(--ac2soft)' : 'transparent', dot: checked[i] ? 'var(--ac2)' : 'transparent', mark: checked[i] ? '✓' : '',
+        toggle: () => this.setState(st => ({ checked: st.checked.map((c, j) => (j === i ? !c : c)) }))
+      })),
+      progressLabel: done === 4 ? 'All done. Your site is live!' : `${done} of 4 · you're ${['just starting', 'on your way', 'halfway there', 'almost live'][done]}`,
+      work: WORK,
+      quote: QUOTES[q], quoteNum: `${q + 1}/${QUOTES.length}`,
+      nextQuote: () => this.setState(s => ({ q: (s.q + 1) % QUOTES.length })),
+      sent: this.state.sent, notSent: !this.state.sent, send: () => this.setState({ sent: true }),
+      themeBtns: Object.entries(THEMES).map(([k, t]) => ({
+        label: t.label, dot: t.ac, bg: k === theme ? 'var(--ink)' : 'transparent', fg: k === theme ? 'var(--bg)' : 'var(--ink)',
+        pick: () => { this.applyTheme(k); this.setState({ theme: k }); }
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

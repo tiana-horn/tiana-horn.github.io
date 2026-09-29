@@ -1,0 +1,151 @@
+@import 'tailwindcss';
+
+/* ---- Theme tokens (Organic / Midnight / Garden) ---- */
+/* Organic is the default and is applied to :root so SSR renders correctly. */
+:root,
+.theme-organic {
+  --bg: #f5ead8;
+  --sf: #ebddc5;
+  --card: #f9f4ed;
+  --ink: #201e1d;
+  --mut: #645c50;
+  --ac: #c67139;
+  --ac2: #7a8a5e;
+  --acsoft: #ffe1d0;
+  --ac2soft: #e1eecc;
+  --onac: #201e1d;
+  --r: 28px;
+}
+
+.theme-midnight {
+  --bg: #2e2b25;
+  --sf: #474238;
+  --card: #3a362f;
+  --ink: #f9f4ed;
+  --mut: #c0b6a5;
+  --ac: #f6a06b;
+  --ac2: #aebf92;
+  --acsoft: #643312;
+  --ac2soft: #3d472b;
+  --onac: #2e2b25;
+  --r: 14px;
+}
+
+.theme-garden {
+  --bg: #f0fae1;
+  --sf: #e1eecc;
+  --card: #f9fcf2;
+  --ink: #272e1b;
+  --mut: #56633f;
+  --ac: #b2622d;
+  --ac2: #56633f;
+  --acsoft: #ffe1d0;
+  --ac2soft: #ccdbb2;
+  --onac: #fff2eb;
+  --r: 48px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-cardo), Georgia, serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--ac);
+}
+
+::selection {
+  background: #ffc6a5;
+}
+
+:focus-visible {
+  outline: 2px solid #c67139;
+  outline-offset: 2px;
+}
+
+/* ---- Studio Desktop hover states ---- */
+.sd-desktop-icon:hover {
+  background: color-mix(in srgb, var(--card) 70%, transparent);
+}
+.sd-dock-icon:hover {
+  transform: translateY(-10px) scale(1.18);
+}
+.sd-tidy:hover {
+  background: var(--sf);
+}
+.sd-work-tile:hover {
+  background: var(--sf);
+  transform: translateY(-3px);
+}
+.sd-services-video:hover {
+  color: var(--onac);
+  transform: translateY(-2px);
+}
+
+/* ---- Video & Social hover states ---- */
+.vs-cta:hover {
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+.vs-offer:hover {
+  transform: translateY(-8px) rotate(-1deg);
+}
+.vs-offer-loved:hover {
+  transform: translateY(-8px) rotate(1deg);
+}
+
+/* ---- Video & Social responsive stacking ---- */
+@media (max-width: 899px) {
+  .vs-hero {
+    grid-template-columns: 1fr !important;
+    padding-top: 120px !important;
+  }
+  .vs-phones {
+    order: 2;
+    height: 520px !important;
+  }
+  .vs-edit-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .vs-book {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+}
+
+/* Disable cursor-driven motion on touch devices */
+@media (hover: none) {
+  .vs-phones > div {
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  .sd-dock-icon:hover {
+    transform: none;
+  }
+  .vs-offer:hover,
+  .vs-offer-loved:hover {
+    transform: none;
+  }
+}

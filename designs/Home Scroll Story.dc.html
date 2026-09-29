@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5ead8;--sf:#ebddc5;--card:#f9f4ed;--ink:#201e1d;--mut:#645c50;--ac:#c67139;--ac2:#7a8a5e;--acsoft:#ffe1d0;--ac2soft:#e1eecc;--onac:#201e1d;--r:28px;}
+html,body{margin:0;scroll-behavior:smooth}
+*{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--ac,#c67139)}
+::selection{background:#ffc6a5}
+:focus-visible{outline:2px solid #c67139;outline-offset:2px}
+</style>
+</helmet>
+<div ref="{{ rootRef }}" style="background:var(--bg);color:var(--ink);font-family:Cardo,Georgia,serif;font-size:16px;line-height:1.55;transition:background-color .6s ease,color .6s ease;min-height:100vh;overflow-x:clip">
+
+<nav style="position:fixed;top:16px;left:16px;right:16px;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 12px 10px 24px;background:color-mix(in srgb,var(--card) 82%,transparent);backdrop-filter:blur(14px);border-radius:999px;box-shadow:0 3px 10px rgba(46,43,37,.12);transition:background-color .6s">
+<a href="#top" style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.02em">Tiana Horn</a>
+<div style="display:flex;align-items:center;gap:26px;font-weight:600;font-size:15px;flex-wrap:wrap">
+<a href="#process">Process</a>
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#about">About</a>
+<a href="Video%20and%20Social.dc.html">Video &amp; Social</a>
+</div>
+<a href="#contact" style="background:var(--ac);color:var(--onac);padding:10px 20px;border-radius:999px;font-weight:700;font-size:15px;transition:background-color .6s,transform .2s" style-hover="transform:translateY(-2px);color:var(--onac)">Book a call</a>
+</nav>
+
+<section id="top" ref="{{ heroRef }}" onMouseMove="{{ onHeroMove }}" onMouseLeave="{{ onHeroLeave }}" style="--mx:0;--my:0;--sx:70%;--sy:40%;position:relative;min-height:100vh;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:40px;padding:140px 6vw 80px;background:radial-gradient(700px circle at var(--sx) var(--sy),var(--acsoft),transparent 62%);transition:background-color .6s">
+<div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:28px;max-width:720px">
+<div style="display:flex;align-items:center;gap:10px;font-weight:600;color:var(--mut);font-size:15px"><span style="width:10px;height:10px;border-radius:50%;background:var(--ac2)"></span>Taking 3 new projects this season</div>
+<h1 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(48px,6.6vw,104px);line-height:.98;letter-spacing:.005em;margin:0;text-wrap:balance">Websites that feel like <span style="color:var(--ac);transition:color .6s">you</span>, built at the speed of a conversation.</h1>
+<p style="font-size:20px;line-height:1.5;color:var(--mut);margin:0;max-width:540px;text-wrap:pretty">I'm Tiana, a software engineer with 7 years of experience. I pair AI with careful craft, so you get a custom site in weeks instead of months.</p>
+<div style="display:flex;align-items:center;gap:12px;background:var(--card);border-radius:999px;padding:8px 8px 8px 22px;box-shadow:0 12px 32px rgba(46,43,37,.14);max-width:600px;transition:background-color .6s">
+<span style="font-family:'JetBrains Mono',monospace;color:var(--ac);font-weight:500">›</span>
+<span style="flex:1;min-width:0;font-family:'JetBrains Mono',monospace;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ typed }}<span style="display:inline-block;width:2px;height:1.1em;vertical-align:-3px;margin-left:2px;background:var(--ink);opacity:{{ caretOp }}"></span></span>
+<a href="#process" style="flex:none;background:var(--ink);color:var(--bg);padding:12px 20px;border-radius:999px;font-weight:700;font-size:15px" style-hover="color:var(--bg);opacity:.88">See how it's built ↓</a>
+</div>
+</div>
+<div style="position:relative;height:min(620px,70vh);min-height:420px">
+<div style="position:absolute;right:2%;top:4%;width:74%;aspect-ratio:1;border-radius:50%;background:var(--ac);transform:translate(calc(var(--mx) * -34px),calc(var(--my) * -34px));transition:transform .5s cubic-bezier(.2,.8,.2,1),background-color .6s"></div>
+<div style="position:absolute;left:0;bottom:6%;width:36%;aspect-ratio:1;border-radius:50%;background:var(--ac2);transform:translate(calc(var(--mx) * 46px),calc(var(--my) * 46px));transition:transform .6s cubic-bezier(.2,.8,.2,1),background-color .6s"></div>
+<div style="position:absolute;right:0;bottom:0;width:18%;aspect-ratio:1;border-radius:50%;background:var(--sf);transform:translate(calc(var(--mx) * 70px),calc(var(--my) * 70px));transition:transform .7s cubic-bezier(.2,.8,.2,1),background-color .6s"></div>
+<div style="position:absolute;right:12%;top:14%;width:56%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:10px solid var(--bg);transform:translate(calc(var(--mx) * 14px),calc(var(--my) * 14px));transition:transform .4s cubic-bezier(.2,.8,.2,1),border-color .6s;box-shadow:0 12px 32px rgba(46,43,37,.22)">
+<img src="assets/tiana.jpg" alt="Tiana Horn" style="width:100%;height:100%;object-fit:cover;filter:saturate(.6) contrast(.85) brightness(1.1) opacity(.94)">
+</div>
+<div style="position:absolute;left:8%;top:10%;background:var(--card);border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px;box-shadow:0 3px 10px rgba(46,43,37,.16);transform:translate(calc(var(--mx) * 22px),calc(var(--my) * 22px)) rotate(-6deg);transition:transform .5s,background-color .6s">Hi, I'm Tiana!</div>
+</div>
+</section>
+
+<section id="process" ref="{{ storyRef }}" style="--p:0;position:relative;height:420vh">
+<div style="position:sticky;top:0;height:100vh;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:5vw;align-items:center;padding:96px 6vw 48px">
+<div style="display:flex;flex-direction:column;gap:28px">
+<div style="font-weight:700;color:var(--ac2);font-size:15px;transition:color .6s">How we work together</div>
+<h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(36px,4vw,60px);line-height:1.02;letter-spacing:.01em;margin:0;text-wrap:balance">One sentence becomes a site. Scroll and watch.</h2>
+<div style="display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:48px 1fr;gap:14px;padding:14px 18px;border-radius:22px;background:{{ s.bg }};opacity:{{ s.op }};transition:all .45s ease">
+<div style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--ac);line-height:1">{{ s.n }}</div>
+<div><div style="font-weight:700;font-size:18px">{{ s.title }}</div><div style="color:var(--mut);font-size:15px;text-wrap:pretty">{{ s.body }}</div></div>
+</div>
+</sc-for>
+</div>
+<div style="height:8px;border-radius:999px;background:var(--sf);overflow:hidden"><div style="height:100%;width:calc(var(--p) * 100%);background:var(--ac);border-radius:999px"></div></div>
+</div>
+
+<div style="position:relative;height:min(600px,74vh);border-radius:var(--r);background:var(--card);box-shadow:0 12px 32px rgba(46,43,37,.2);overflow:hidden;transition:border-radius .6s,background-color .6s">
+<div style="display:flex;align-items:center;gap:8px;padding:14px 18px;background:var(--sf);transition:background-color .6s">
+<span style="width:12px;height:12px;border-radius:50%;background:var(--ac)"></span><span style="width:12px;height:12px;border-radius:50%;background:var(--ac2)"></span><span style="width:12px;height:12px;border-radius:50%;background:var(--mut);opacity:.4"></span>
+<div style="margin-left:12px;flex:1;background:var(--card);border-radius:999px;padding:5px 16px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--mut)">{{ url }}</div>
+</div>
+<div style="position:relative;height:calc(100% - 44px)">
+
+<div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:0 10%;opacity:{{ L0 }};transform:scale({{ S0 }});transition:opacity .5s,transform .5s">
+<div style="align-self:flex-end;max-width:80%;background:var(--ac);color:var(--onac);padding:16px 22px;border-radius:24px 24px 6px 24px;font-size:18px;font-weight:600">A warm, rounded site for my Brooklyn flower shop. Soft shapes, and booking right up front.</div>
+<div style="align-self:flex-start;max-width:80%;background:var(--sf);padding:16px 22px;border-radius:24px 24px 24px 6px;font-size:17px">Love it. What's the one thing a visitor should do first?</div>
+<div style="align-self:flex-end;max-width:80%;background:var(--ac);color:var(--onac);padding:16px 22px;border-radius:24px 24px 6px 24px;font-size:18px;font-weight:600">Order a same-day bouquet.</div>
+</div>
+
+<div style="position:absolute;inset:0;padding:28px;display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:auto 1fr auto;gap:18px;opacity:{{ L1 }};transform:scale({{ S1 }});transition:opacity .5s,transform .5s">
+<div style="grid-column:1/3;display:flex;justify-content:space-between;align-items:center"><div style="width:110px;height:18px;border-radius:999px;background:#dcd3c4"></div><div style="display:flex;gap:10px"><div style="width:54px;height:12px;border-radius:999px;background:#dcd3c4"></div><div style="width:54px;height:12px;border-radius:999px;background:#dcd3c4"></div><div style="width:80px;height:26px;border-radius:999px;background:#c0b6a5"></div></div></div>
+<div style="display:flex;flex-direction:column;justify-content:center;gap:12px"><div style="height:30px;width:90%;border-radius:12px;background:#c0b6a5"></div><div style="height:30px;width:70%;border-radius:12px;background:#c0b6a5"></div><div style="height:12px;width:80%;border-radius:999px;background:#dcd3c4;margin-top:8px"></div><div style="height:12px;width:60%;border-radius:999px;background:#dcd3c4"></div><div style="height:42px;width:170px;border-radius:999px;background:#a19786;margin-top:10px"></div></div>
+<div style="border-radius:50%;background:#dcd3c4;border:2px dashed #a19786;align-self:center;aspect-ratio:1"></div>
+<div style="grid-column:1/3;display:grid;grid-template-columns:repeat(3,1fr);gap:14px"><div style="height:70px;border-radius:18px;background:#eee7db"></div><div style="height:70px;border-radius:18px;background:#eee7db"></div><div style="height:70px;border-radius:18px;background:#eee7db"></div></div>
+</div>
+
+<div style="position:absolute;inset:0;padding:28px;display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:auto 1fr auto;gap:18px;background:#fff2eb;opacity:{{ L2 }};transform:scale({{ S2 }});transition:opacity .5s,transform .5s">
+<div style="grid-column:1/3;display:flex;justify-content:space-between;align-items:center;color:#402310"><div style="font-family:'Bebas Neue',sans-serif;font-size:22px">Petal &amp; Stem</div><div style="display:flex;gap:16px;align-items:center;font-size:13px;font-weight:600"><span>Shop</span><span>Weddings</span><span style="background:#b2622d;color:#fff2eb;padding:6px 14px;border-radius:999px">Order today</span></div></div>
+<div style="display:flex;flex-direction:column;justify-content:center;gap:12px;color:#402310"><div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,2.6vw,42px);line-height:1">Flowers by five, made by hand.</div><div style="font-size:14px;color:#643312">Same-day bouquets across Brooklyn, wrapped with care.</div><div style="align-self:flex-start;background:#b2622d;color:#fff2eb;padding:12px 22px;border-radius:999px;font-weight:700;font-size:14px;margin-top:6px">Send a bouquet</div></div>
+<div style="position:relative;align-self:center;aspect-ratio:1"><div style="position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(135deg,#ffc6a5 0 10px,#ffe1d0 10px 20px);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:#8c491a">bouquet photo</div><div style="position:absolute;right:-6%;bottom:4%;width:34%;aspect-ratio:1;border-radius:50%;background:#8fa073"></div></div>
+<div style="grid-column:1/3;display:grid;grid-template-columns:repeat(3,1fr);gap:14px"><div style="height:70px;border-radius:18px;background:#ffe1d0;padding:12px;font-weight:700;font-size:13px;color:#643312">Seasonal</div><div style="height:70px;border-radius:18px;background:#e1eecc;padding:12px;font-weight:700;font-size:13px;color:#3d472b">Weddings</div><div style="height:70px;border-radius:18px;background:#ffe1d0;padding:12px;font-weight:700;font-size:13px;color:#643312">Subscriptions</div></div>
+</div>
+
+<div style="position:absolute;top:18px;left:50%;display:flex;align-items:center;gap:10px;background:#3d472b;color:#f0fae1;padding:10px 20px;border-radius:999px;font-weight:700;font-size:14px;box-shadow:0 12px 32px rgba(46,43,37,.25);opacity:{{ L3 }};transform:translate(-50%,{{ B3 }}px);transition:opacity .5s,transform .5s cubic-bezier(.2,1.4,.4,1)"><span style="width:9px;height:9px;border-radius:50%;background:#aebf92"></span>Live at petalandstem.com</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="services" style="padding:120px 6vw;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:14px;max-width:720px">
+<div style="font-weight:700;color:var(--ac2);font-size:15px">Services</div>
+<h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(36px,4vw,60px);line-height:1.02;letter-spacing:.01em;margin:0;text-wrap:balance">Everything your online presence needs, from one person who cares.</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+<div style="background:var(--card);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:14px;min-height:300px;transition:transform .3s,background-color .6s,border-radius .6s" style-hover="transform:translateY(-8px) rotate(-1deg)">
+<div style="width:56px;height:56px;border-radius:50%;background:var(--acsoft);display:grid;place-items:center;font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--ac)">1</div>
+<div style="font-family:'Bebas Neue',sans-serif;font-size:26px;line-height:1.1">AI-powered site builds</div>
+<div style="color:var(--mut);text-wrap:pretty">Custom websites designed and coded with AI, then refined by hand. You get a launch in weeks, with no template look.</div>
+</div>
+<div style="background:var(--card);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:14px;min-height:300px;transition:transform .3s,background-color .6s,border-radius .6s" style-hover="transform:translateY(-8px) rotate(1deg)">
+<div style="width:56px;height:56px;border-radius:50%;background:var(--ac2soft);display:grid;place-items:center;font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--ac2)">2</div>
+<div style="font-family:'Bebas Neue',sans-serif;font-size:26px;line-height:1.1">Brand &amp; UI design</div>
+<div style="color:var(--mut);text-wrap:pretty">Interfaces that feel intuitive and look like you, with every screen pointing visitors toward your goals.</div>
+</div>
+<div style="background:var(--card);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:14px;min-height:300px;transition:transform .3s,background-color .6s,border-radius .6s" style-hover="transform:translateY(-8px) rotate(-1deg)">
+<div style="width:56px;height:56px;border-radius:50%;background:var(--acsoft);display:grid;place-items:center;font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--ac)">3</div>
+<div style="font-family:'Bebas Neue',sans-serif;font-size:26px;line-height:1.1">Care &amp; growth</div>
+<div style="color:var(--mut);text-wrap:pretty">Ongoing updates, security and new features, so your site keeps pace with your business.</div>
+</div>
+<a href="Video%20and%20Social.dc.html" style="background:var(--ac);color:var(--onac);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:14px;min-height:300px;transition:transform .3s,background-color .6s,border-radius .6s" style-hover="transform:translateY(-8px) rotate(1deg);color:var(--onac)">
+<div style="width:56px;height:56px;border-radius:50%;background:var(--onac);color:var(--ac);display:grid;place-items:center;font-size:22px">▶</div>
+<div style="font-family:'Bebas Neue',sans-serif;font-size:26px;line-height:1.1">Video &amp; social content</div>
+<div style="text-wrap:pretty;font-weight:600">Short-form edits and content that keep your brand in people's feeds.</div>
+<div style="margin-top:auto;font-weight:700">Explore the studio →</div>
+</a>
+</div>
+</section>
+
+<section id="work" style="padding:40px 0 120px;display:flex;flex-direction:column;gap:40px">
+<div style="padding:0 6vw;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:14px;max-width:640px">
+<div style="font-weight:700;color:var(--ac2);font-size:15px">Selected work</div>
+<h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(36px,4vw,60px);line-height:1.02;letter-spacing:.01em;margin:0">Built for very different people.</h2>
+</div>
+<div style="color:var(--mut);font-weight:600">Drag or scroll →</div>
+</div>
+<div style="display:flex;gap:24px;overflow-x:auto;padding:12px 6vw 24px;scroll-snap-type:x mandatory;scrollbar-width:none">
+<sc-for list="{{ work }}" as="w" hint-placeholder-count="4">
+<div style="flex:none;width:min(440px,80vw);scroll-snap-align:start;display:flex;flex-direction:column;gap:16px;transition:transform .35s" style-hover="transform:translateY(-8px)">
+<div style="aspect-ratio:4/3;border-radius:var(--r);background:repeating-linear-gradient(135deg,var(--sf) 0 12px,var(--card) 12px 24px);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--mut);transition:border-radius .6s">{{ w.shot }}</div>
+<div style="display:flex;gap:8px"><span style="background:var(--ac2soft);color:var(--ink);font-weight:700;font-size:13px;padding:4px 12px;border-radius:999px">{{ w.tag }}</span></div>
+<div style="font-family:'Bebas Neue',sans-serif;font-size:26px;line-height:1.1">{{ w.title }}</div>
+<div style="color:var(--mut)">{{ w.body }}</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="about" style="padding:120px 6vw;background:var(--sf);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:6vw;align-items:center;transition:background-color .6s">
+<div style="position:relative;aspect-ratio:4/5;max-width:460px;width:100%">
+<div style="position:absolute;inset:8% -6% -4% 10%;border-radius:58% 42% 55% 45%/48% 55% 45% 52%;background:var(--ac2);transition:background-color .6s"></div>
+<div style="position:absolute;inset:0 8% 8% 0;border-radius:44% 56% 46% 54%/52% 44% 56% 48%;overflow:hidden">
+<img src="assets/tiana.jpg" alt="Tiana Horn" style="width:100%;height:100%;object-fit:cover;filter:saturate(.6) contrast(.85) brightness(1.1) opacity(.94)">
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:22px;max-width:620px">
+<div style="font-weight:700;color:var(--ac2);font-size:15px">About</div>
+<h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(36px,4vw,60px);line-height:1.02;letter-spacing:.01em;margin:0;text-wrap:balance">Hi, I'm Tiana. I love a good brief.</h2>
+<p style="margin:0;font-size:18px;color:var(--mut);text-wrap:pretty">I've spent seven years as a software engineer, building for e-commerce brands, non-profits, government agencies and wedding businesses. These days I run favored.digital, where AI does the heavy lifting and I handle the thinking, taste and care.</p>
+<p style="margin:0;font-size:18px;color:var(--mut);text-wrap:pretty">Every project gets my full attention. I'd rather build a lasting partnership than ship and disappear.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="https://www.linkedin.com/in/tiana-horn/" target="_blank" style="background:var(--card);padding:10px 20px;border-radius:999px;font-weight:700">LinkedIn ↗</a>
+<a href="https://favored.digital" target="_blank" style="background:var(--card);padding:10px 20px;border-radius:999px;font-weight:700">favored.digital ↗</a>
+</div>
+</div>
+</section>
+
+<section style="padding:120px 6vw;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:6vw;align-items:center">
+<div style="display:flex;flex-direction:column;gap:18px">
+<div style="font-weight:700;color:var(--ac2);font-size:15px">Kind words</div>
+<h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(36px,4vw,60px);line-height:1.02;letter-spacing:.01em;margin:0">What clients say after launch.</h2>
+<button onClick="{{ nextQuote }}" style="align-self:flex-start;margin-top:10px;border:0;cursor:pointer;background:var(--ink);color:var(--bg);font:700 15px Cardo,Georgia,serif;padding:12px 22px;border-radius:999px" style-hover="opacity:.88">Next story →</button>
+</div>
+<div style="position:relative;height:340px;cursor:pointer" onClick="{{ nextQuote }}">
+<sc-for list="{{ quotes }}" as="q" hint-placeholder-count="3">
+<div style="position:absolute;inset:0 40px 40px 0;background:{{ q.bg }};border-radius:var(--r);padding:40px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;box-shadow:0 12px 32px rgba(46,43,37,.14);z-index:{{ q.z }};transform:{{ q.tf }};transition:transform .55s cubic-bezier(.2,.9,.2,1),background-color .6s">
+<div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,2vw,30px);line-height:1.2;text-wrap:pretty">“{{ q.text }}”</div>
+<div style="font-weight:700">{{ q.who }} <span style="font-weight:400;color:var(--mut)">· {{ q.role }}</span></div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="contact" style="margin:0 16px 16px;padding:100px 6vw;border-radius:40px;background:var(--ink);color:var(--bg);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6vw;transition:background-color .6s,color .6s">
+<div style="display:flex;flex-direction:column;gap:24px">
+<h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(40px,5vw,76px);line-height:1;letter-spacing:.01em;margin:0;text-wrap:balance">Let's make something that feels like you.</h2>
+<p style="margin:0;font-size:18px;opacity:.8;max-width:460px">A detailed brief or just a spark of an idea both work. I reply within 24 hours.</p>
+<div style="display:flex;flex-direction:column;gap:10px;font-weight:600">
+<div>tiana@favored.digital</div><div style="opacity:.7">Remote, working worldwide</div>
+</div>
+</div>
+<div style="background:var(--bg);color:var(--ink);border-radius:var(--r);padding:32px;transition:background-color .6s,color .6s">
+<sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="font-family:'Bebas Neue',sans-serif;font-size:26px">Let's start planning</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<input placeholder="First name" style="font:16px Cardo,Georgia,serif;padding:14px 20px;border-radius:999px;border:0;background:var(--card);color:var(--ink);min-width:0">
+<input placeholder="Last name" style="font:16px Cardo,Georgia,serif;padding:14px 20px;border-radius:999px;border:0;background:var(--card);color:var(--ink);min-width:0">
+</div>
+<input placeholder="Email" style="font:16px Cardo,Georgia,serif;padding:14px 20px;border-radius:999px;border:0;background:var(--card);color:var(--ink)">
+<textarea placeholder="Tell me about your project…" rows="4" style="font:16px Cardo,Georgia,serif;padding:16px 20px;border-radius:24px;border:0;background:var(--card);color:var(--ink);resize:none"></textarea>
+<button onClick="{{ send }}" style="border:0;cursor:pointer;background:var(--ac);color:var(--onac);font:700 16px Cardo,Georgia,serif;padding:15px;border-radius:999px" style-hover="transform:translateY(-2px)">Send it over</button>
+</div>
+</sc-if>
+<sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;padding:40px 0">
+<div style="width:64px;height:64px;border-radius:50%;background:var(--ac2)"></div>
+<div style="font-family:'Bebas Neue',sans-serif;font-size:30px">Message sent!</div>
+<div style="color:var(--mut)">Thank you for reaching out. I'll get back to you within 24 hours.</div>
+</div>
+</sc-if>
+</div>
+</section>
+<footer style="padding:24px 6vw 120px;display:flex;justify-content:space-between;color:var(--mut);font-size:14px;flex-wrap:wrap;gap:12px"><span>© 2026 Tiana Horn · favored.digital</span><span>This site was designed with AI and refined by hand.</span></footer>
+
+<sc-if value="{{ showDock }}" hint-placeholder-val="{{ true }}">
+<div style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:6px;padding:6px 6px 6px 18px;background:var(--ink);color:var(--bg);border-radius:999px;box-shadow:0 12px 32px rgba(46,43,37,.3);transition:background-color .6s,color .6s">
+<span style="font-weight:700;font-size:14px;margin-right:6px;white-space:nowrap">Restyle this site</span>
+<sc-for list="{{ themeBtns }}" as="t" hint-placeholder-count="3">
+<button onClick="{{ t.pick }}" style="border:0;cursor:pointer;display:flex;align-items:center;gap:8px;font:700 14px Cardo,Georgia,serif;padding:9px 16px;border-radius:999px;background:{{ t.bg }};color:{{ t.fg }};transition:background-color .3s"><span style="width:12px;height:12px;border-radius:50%;background:{{ t.dot }}"></span>{{ t.label }}</button>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;organic&quot;,&quot;midnight&quot;,&quot;garden&quot;],&quot;default&quot;:&quot;organic&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:0,&quot;max&quot;:2,&quot;step&quot;:0.1,&quot;default&quot;:1,&quot;tsType&quot;:&quot;number&quot;},&quot;showDock&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const THEMES = {
+  organic: { label: 'Organic', bg: '#f5ead8', sf: '#ebddc5', card: '#f9f4ed', ink: '#201e1d', mut: '#645c50', ac: '#c67139', ac2: '#7a8a5e', acsoft: '#ffe1d0', ac2soft: '#e1eecc', onac: '#201e1d', r: '28px' },
+  midnight: { label: 'Midnight', bg: '#2e2b25', sf: '#474238', card: '#3a362f', ink: '#f9f4ed', mut: '#c0b6a5', ac: '#f6a06b', ac2: '#aebf92', acsoft: '#643312', ac2soft: '#3d472b', onac: '#2e2b25', r: '14px' },
+  garden: { label: 'Garden', bg: '#f0fae1', sf: '#e1eecc', card: '#f9fcf2', ink: '#272e1b', mut: '#56633f', ac: '#b2622d', ac2: '#56633f', acsoft: '#ffe1d0', ac2soft: '#ccdbb2', onac: '#fff2eb', r: '48px' }
+};
+const PROMPTS = [
+  'a warm, rounded site for my bakery in Austin',
+  'a portfolio that feels like a gallery opening',
+  'a booking site my clients will actually enjoy',
+  'a shop for hand-dyed yarn, cozy but modern'
+];
+const STEPS = [
+  { n: '01', title: 'We talk it through', body: 'You tell me about your business in plain words. No jargon or forms.' },
+  { n: '02', title: 'I shape the structure', body: 'AI drafts the layout in minutes, and I tune it around what visitors need.' },
+  { n: '03', title: 'We make it yours', body: 'Color, type and voice, refined together until it feels like you.' },
+  { n: '04', title: 'Launch, then care', body: 'Tested on every device, launched and looked after.' }
+];
+const URLS = ['new-chat', 'draft-01.preview', 'petalandstem.preview', 'petalandstem.com'];
+const WORK = [
+  { tag: 'E-commerce', title: 'Skincare shop relaunch', body: 'A calmer storefront built to scale a growing brand.', shot: 'storefront screenshot' },
+  { tag: 'Non-profit', title: 'Volunteer hub', body: 'Tools to organize operations and amplify impact.', shot: 'dashboard screenshot' },
+  { tag: 'Government', title: 'Compliance portal', body: 'Accessible, compliance-focused and genuinely clear.', shot: 'portal screenshot' },
+  { tag: 'Weddings', title: 'Planner booking site', body: 'Romantic but practical, with inquiries up front.', shot: 'wedding site screenshot' }
+];
+const QUOTES = [
+  { text: 'Tiana turned my rambling voice memo into a site that sounds more like me than I do.', who: 'Client name', role: 'Founder, small business' },
+  { text: 'We launched in three weeks. Our old agency quoted us four months.', who: 'Client name', role: 'Director, non-profit' },
+  { text: 'She was patient with every question and still delivered early.', who: 'Client name', role: 'Owner, wedding studio' }
+];
+
+class Component extends DCLogic {
+  state = { theme: this.props.theme ?? 'organic', typed: '', caret: true, stage: 0, q: 0, sent: false };
+  rootRef = React.createRef();
+  heroRef = React.createRef();
+  storyRef = React.createRef();
+
+  componentDidMount() {
+    this._lastPropTheme = this.props.theme;
+    this.applyTheme();
+    let pi = 0, ci = 0, dir = 1, hold = 0, tick = 0;
+    this.typer = setInterval(() => {
+      const full = PROMPTS[pi]; tick++;
+      if (hold > 0) hold--;
+      else if (dir > 0) { ci++; if (ci >= full.length) { dir = -1; hold = 36; } }
+      else { ci -= 2; if (ci <= 0) { ci = 0; dir = 1; pi = (pi + 1) % PROMPTS.length; hold = 6; } }
+      this.setState({ typed: full.slice(0, ci), caret: dir < 0 || hold === 0 ? true : Math.floor(tick / 8) % 2 === 0 });
+    }, 55);
+    this.onScroll = () => {
+      const el = this.storyRef.current; if (!el) return;
+      const r = el.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, -r.top / (r.height - window.innerHeight)));
+      el.style.setProperty('--p', p.toFixed(4));
+      const stage = Math.min(3, Math.floor(p * 4));
+      if (stage !== this.state.stage) this.setState({ stage });
+    };
+    document.addEventListener('scroll', this.onScroll, { capture: true, passive: true });
+    this.onScroll();
+  }
+  componentWillUnmount() { clearInterval(this.typer); document.removeEventListener('scroll', this.onScroll, { capture: true }); }
+  componentDidUpdate() {
+    const t = this.props.theme;
+    if (t && t !== this._lastPropTheme) { this._lastPropTheme = t; this.applyTheme(t); this.setState({ theme: t }); }
+  }
+  applyTheme(key) {
+    const el = this.rootRef.current, t = THEMES[key || this.state.theme] || THEMES.organic; if (!el) return;
+    ['bg','sf','card','ink','mut','ac','ac2','acsoft','ac2soft','onac','r'].forEach(k => el.style.setProperty('--' + k, t[k]));
+  }
+
+  renderVals() {
+    const { stage, theme, q } = this.state;
+    const m = this.props.motion ?? 1;
+    const op = i => (i === stage ? 1 : 0);
+    const sc = i => (i === stage ? 1 : i < stage ? 1.04 : 0.96);
+    return {
+      rootRef: this.rootRef, heroRef: this.heroRef, storyRef: this.storyRef,
+      typed: this.state.typed, caretOp: this.state.caret ? 1 : 0,
+      onHeroMove: e => {
+        const el = this.heroRef.current; if (!el) return;
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        el.style.setProperty('--mx', ((x - .5) * 2 * m).toFixed(3));
+        el.style.setProperty('--my', ((y - .5) * 2 * m).toFixed(3));
+        el.style.setProperty('--sx', (x * 100).toFixed(1) + '%');
+        el.style.setProperty('--sy', (y * 100).toFixed(1) + '%');
+      },
+      onHeroLeave: () => { const el = this.heroRef.current; if (el) { el.style.setProperty('--mx', 0); el.style.setProperty('--my', 0); } },
+      steps: STEPS.map((s, i) => ({ ...s, op: i === stage ? 1 : 0.4, bg: i === stage ? 'var(--card)' : 'transparent' })),
+      url: URLS[stage],
+      L0: op(0), L1: op(1), L2: stage >= 2 ? 1 : 0, L3: stage === 3 ? 1 : 0,
+      S0: sc(0), S1: sc(1), S2: stage >= 2 ? 1 : 0.96, B3: stage === 3 ? 0 : -30,
+      work: WORK,
+      quotes: QUOTES.map((x, i) => {
+        const k = (i - q + QUOTES.length) % QUOTES.length;
+        return { ...x, z: 10 - k, tf: `translate(${k * 20}px, ${k * 20}px) rotate(${k * 2.5}deg)`, bg: k === 0 ? 'var(--card)' : k === 1 ? 'var(--acsoft)' : 'var(--ac2soft)' };
+      }),
+      nextQuote: () => this.setState(s => ({ q: (s.q + 1) % QUOTES.length })),
+      sent: this.state.sent, notSent: !this.state.sent,
+      send: () => this.setState({ sent: true }),
+      showDock: this.props.showDock ?? true,
+      themeBtns: Object.entries(THEMES).map(([k, t]) => ({
+        label: t.label, dot: t.ac,
+        bg: k === theme ? 'var(--bg)' : 'transparent', fg: k === theme ? 'var(--ink)' : 'var(--bg)',
+        pick: () => { this.applyTheme(k); this.setState({ theme: k }); }
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

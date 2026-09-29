@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#f5ead8;scroll-behavior:smooth}
+*{box-sizing:border-box}
+a{color:#201e1d;text-decoration:none}
+a:hover{color:#8c491a}
+::selection{background:#ffc6a5}
+:focus-visible{outline:2px solid #c67139;outline-offset:2px}
+</style>
+</helmet>
+<div style="background:#f5ead8;color:#201e1d;font-family:Cardo,Georgia,serif;font-size:16px;line-height:1.55;overflow-x:clip">
+
+<nav style="position:fixed;top:16px;left:16px;right:16px;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 12px 10px 24px;background:rgba(249,244,237,.85);backdrop-filter:blur(14px);border-radius:999px;box-shadow:0 3px 10px rgba(46,43,37,.12)">
+<a href="Home%20Scroll%20Story.dc.html" style="font-family:'Bebas Neue',sans-serif;font-size:22px">Tiana Horn</a>
+<div style="display:flex;gap:26px;font-weight:600;font-size:15px;flex-wrap:wrap">
+<a href="Home%20Scroll%20Story.dc.html">← Websites</a>
+<a href="#edit">How I edit</a>
+<a href="#reels">Reels</a>
+<a href="#offers">Offers</a>
+</div>
+<a href="#book" style="background:#c67139;color:#201e1d;padding:10px 20px;border-radius:999px;font-weight:700;font-size:15px" style-hover="color:#201e1d;transform:translateY(-2px)">Book a content call</a>
+</nav>
+
+<section ref="{{ heroRef }}" onMouseMove="{{ onHeroMove }}" onMouseLeave="{{ onHeroLeave }}" style="--mx:0;--my:0;min-height:100vh;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:center;padding:140px 6vw 80px">
+<div style="display:flex;flex-direction:column;gap:26px;max-width:680px">
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<span style="background:#e1eecc;font-weight:700;font-size:13px;padding:5px 14px;border-radius:999px">Instagram Reels</span>
+<span style="background:#e1eecc;font-weight:700;font-size:13px;padding:5px 14px;border-radius:999px">TikTok</span>
+<span style="background:#e1eecc;font-weight:700;font-size:13px;padding:5px 14px;border-radius:999px">YouTube Shorts</span>
+<span style="background:#e1eecc;font-weight:700;font-size:13px;padding:5px 14px;border-radius:999px">LinkedIn</span>
+</div>
+<h1 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(48px,6.6vw,104px);line-height:.98;letter-spacing:.005em;margin:0;text-wrap:balance">Stories that <span style="color:#c67139">stop</span> the scroll.</h1>
+<p style="margin:0;font-size:20px;color:#645c50;max-width:540px;text-wrap:pretty">Video editing and social content for brands that want to feel human online. Send me the raw footage and I'll send back posts people actually watch to the end.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="#book" style="background:#201e1d;color:#f5ead8;padding:14px 24px;border-radius:999px;font-weight:700" style-hover="color:#f5ead8;opacity:.88">Start a content plan</a>
+<a href="#reels" style="background:#ebddc5;padding:14px 24px;border-radius:999px;font-weight:700">Watch the reels ↓</a>
+</div>
+</div>
+<div style="position:relative;height:600px">
+<div style="position:absolute;left:50%;top:50%;width:250px;aspect-ratio:9/16;margin:-222px 0 0 -125px;border-radius:32px;background:repeating-linear-gradient(135deg,#ccdbb2 0 12px,#e1eecc 12px 24px);box-shadow:0 12px 32px rgba(46,43,37,.2);transform:translate(calc(-150px + var(--mx) * -40px),calc(30px + var(--my) * -20px)) rotate(calc(-12deg + var(--mx) * -4deg));transition:transform .6s cubic-bezier(.2,.8,.2,1);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:#56633f">reel · behind the scenes</div>
+<div style="position:absolute;left:50%;top:50%;width:250px;aspect-ratio:9/16;margin:-222px 0 0 -125px;border-radius:32px;background:repeating-linear-gradient(135deg,#ffc6a5 0 12px,#ffe1d0 12px 24px);box-shadow:0 12px 32px rgba(46,43,37,.2);transform:translate(calc(150px + var(--mx) * 40px),calc(30px + var(--my) * 20px)) rotate(calc(12deg + var(--mx) * 4deg));transition:transform .6s cubic-bezier(.2,.8,.2,1);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:#8c491a">reel · product demo</div>
+<div style="position:absolute;left:50%;top:50%;width:270px;aspect-ratio:9/16;margin:-240px 0 0 -135px;border-radius:34px;background:#201e1d;padding:10px;box-shadow:0 20px 44px rgba(46,43,37,.3);transform:translate(calc(var(--mx) * 12px),calc(var(--my) * 12px));transition:transform .4s cubic-bezier(.2,.8,.2,1)">
+<div style="position:relative;width:100%;height:100%;border-radius:26px;overflow:hidden">
+<img src="assets/tiana.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:saturate(.6) contrast(.85) brightness(1.1) opacity(.94)">
+<div style="position:absolute;left:14px;right:14px;bottom:18px;display:flex;flex-direction:column;gap:8px">
+<div style="align-self:flex-start;background:#f9f4ed;color:#201e1d;font-weight:700;font-size:14px;padding:6px 12px;border-radius:12px">3 things I'd fix on your homepage</div>
+<div style="height:4px;border-radius:999px;background:rgba(249,244,237,.4);overflow:hidden"><div style="height:100%;width:{{ heroProg }}%;background:#f6a06b;transition:width .1s linear"></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="edit" style="padding:100px 6vw;background:#201e1d;color:#f5ead8;border-radius:40px;margin:0 16px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:14px;max-width:640px">
+<div style="font-weight:700;color:#aebf92;font-size:15px">How I edit</div>
+<h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(36px,4vw,60px);line-height:1.02;letter-spacing:.01em;margin:0;text-wrap:balance">Every second has a job. Drag the playhead to see each one.</h2>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:48px;align-items:center">
+<div style="aspect-ratio:9/16;border-radius:30px;background:{{ clip.bg }};color:{{ clip.fg }};padding:28px;display:flex;flex-direction:column;justify-content:space-between;transition:background-color .35s">
+<div style="font-family:'JetBrains Mono',monospace;font-size:13px">{{ clip.time }}</div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="font-family:'Bebas Neue',sans-serif;font-size:34px;line-height:1">{{ clip.name }}</div><div style="font-weight:600;text-wrap:pretty">“{{ clip.caption }}”</div></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:28px">
+<div style="font-size:20px;line-height:1.5;max-width:560px;text-wrap:pretty;opacity:.9">{{ clip.why }}</div>
+<div ref="{{ trackRef }}" onPointerDown="{{ onTrackDown }}" style="position:relative;height:96px;cursor:ew-resize;touch-action:none;user-select:none">
+<div style="position:absolute;inset:18px 0 0;display:flex;gap:6px">
+<sc-for list="{{ segs }}" as="g" hint-placeholder-count="4">
+<div style="flex:{{ g.flex }};border-radius:16px;background:{{ g.bg }};color:{{ g.fg }};padding:12px 14px;font-weight:700;font-size:14px;opacity:{{ g.op }};transition:opacity .25s">{{ g.name }}</div>
+</sc-for>
+</div>
+<div style="position:absolute;top:0;bottom:-6px;left:{{ head }}%;width:4px;margin-left:-2px;background:#f9f4ed;border-radius:999px;pointer-events:none"><div style="position:absolute;top:-4px;left:50%;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:#f9f4ed;box-shadow:0 3px 10px rgba(0,0,0,.4)"></div></div>
+</div>
+<div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:13px;opacity:.6"><span>0:00</span><span>0:15</span><span>0:30</span></div>
+</div>
+</div>
+</section>
+
+<section id="reels" style="padding:120px 6vw;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:14px;max-width:640px">
+<div style="font-weight:700;color:#7a8a5e;font-size:15px">Reels</div>
+<h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(36px,4vw,60px);line-height:1.02;letter-spacing:.01em;margin:0">Hover to play.</h2>
+</div>
+<div style="display:flex;gap:6px;background:#ebddc5;padding:5px;border-radius:999px">
+<sc-for list="{{ filters }}" as="f" hint-placeholder-count="4">
+<button onClick="{{ f.pick }}" style="border:0;cursor:pointer;font:700 14px Cardo,Georgia,serif;padding:9px 16px;border-radius:999px;background:{{ f.bg }};color:#201e1d">{{ f.label }}</button>
+</sc-for>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:20px">
+<sc-for list="{{ reels }}" as="r" hint-placeholder-count="8">
+<div onMouseEnter="{{ r.enter }}" onMouseLeave="{{ r.leave }}" style="position:relative;aspect-ratio:9/16;border-radius:28px;overflow:hidden;background:repeating-linear-gradient(135deg,{{ r.c1 }} 0 12px,{{ r.c2 }} 12px 24px);transform:{{ r.tf }};box-shadow:{{ r.sh }};transition:transform .35s cubic-bezier(.2,1.2,.4,1),box-shadow .35s;cursor:pointer">
+<div style="position:absolute;inset:0;display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:#645c50">{{ r.slot }}</div>
+<div style="position:absolute;top:14px;left:14px;background:#f9f4ed;font-weight:700;font-size:12px;padding:4px 10px;border-radius:999px">{{ r.kind }}</div>
+<div style="position:absolute;left:14px;right:14px;bottom:14px;display:flex;flex-direction:column;gap:8px">
+<div style="font-weight:700;font-size:15px;background:rgba(249,244,237,.92);padding:8px 12px;border-radius:14px">{{ r.title }}</div>
+<div style="height:4px;border-radius:999px;background:rgba(32,30,29,.15);overflow:hidden"><div style="height:100%;width:{{ r.prog }};background:#c67139;transition:width {{ r.dur }} linear"></div></div>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="offers" style="padding:40px 6vw 120px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:14px;max-width:680px">
+<div style="font-weight:700;color:#7a8a5e;font-size:15px">Offers</div>
+<h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(36px,4vw,60px);line-height:1.02;letter-spacing:.01em;margin:0;text-wrap:balance">Pick how much you want off your plate.</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+<div style="background:#f9f4ed;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:14px;transition:transform .3s" style-hover="transform:translateY(-8px) rotate(-1deg)">
+<div style="font-family:'Bebas Neue',sans-serif;font-size:28px">Edit only</div>
+<div style="color:#645c50">You film it, and I turn it into polished short-form edits with captions, pacing and hooks.</div>
+<div style="display:flex;flex-direction:column;gap:6px;font-weight:600;margin-top:6px"><span>✓ Raw footage to finished reels</span><span>✓ Captions &amp; sound design</span><span>✓ Platform-ready formats</span></div>
+</div>
+<div style="background:#c67139;color:#201e1d;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:14px;transition:transform .3s;box-shadow:0 12px 32px rgba(46,43,37,.2)" style-hover="transform:translateY(-8px) rotate(1deg)">
+<div style="align-self:flex-start;background:#201e1d;color:#f5ead8;font-weight:700;font-size:12px;padding:4px 12px;border-radius:999px">Most loved</div>
+<div style="font-family:'Bebas Neue',sans-serif;font-size:28px">Content studio</div>
+<div style="font-weight:600">We plan together, you film with my shot lists, and I edit and schedule everything.</div>
+<div style="display:flex;flex-direction:column;gap:6px;font-weight:700;margin-top:6px"><span>✓ Monthly content calendar</span><span>✓ Shot lists &amp; scripts</span><span>✓ Editing + scheduling</span></div>
+</div>
+<div style="background:#f9f4ed;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:14px;transition:transform .3s" style-hover="transform:translateY(-8px) rotate(-1deg)">
+<div style="font-family:'Bebas Neue',sans-serif;font-size:28px">Full channel care</div>
+<div style="color:#645c50">Strategy, editing, posting and community replies, tied into your website so followers become clients.</div>
+<div style="display:flex;flex-direction:column;gap:6px;font-weight:600;margin-top:6px"><span>✓ Everything in Studio</span><span>✓ Community management</span><span>✓ Monthly insights call</span></div>
+</div>
+</div>
+</section>
+
+<section id="book" style="margin:0 16px 16px;padding:100px 6vw;border-radius:40px;background:#7a8a5e;color:#201e1d;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6vw;align-items:center">
+<h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(40px,5vw,76px);line-height:1;letter-spacing:.01em;margin:0;text-wrap:balance">Got footage sitting in your camera roll?</h2>
+<div style="display:flex;flex-direction:column;gap:18px;align-items:flex-start">
+<p style="margin:0;font-size:19px;font-weight:600;max-width:460px">Let's turn it into a month of content. Book a free 20-minute call and bring your favorite clip.</p>
+<a href="Home%20Scroll%20Story.dc.html#contact" style="background:#201e1d;color:#f5ead8;padding:15px 26px;border-radius:999px;font-weight:700" style-hover="color:#f5ead8;opacity:.88">Book a content call →</a>
+<div style="font-weight:600">tiana@favored.digital</div>
+</div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const SEGS = [
+  { name: 'Hook', from: 0, to: 0.1, time: '0:00 – 0:03', bg: '#c67139', fg: '#201e1d', caption: 'Your website is losing you clients. Here is why.', why: 'The first three seconds decide everything. I open on tension, like a question, a bold claim or movement, so thumbs stop.' },
+  { name: 'Story', from: 0.1, to: 0.6, time: '0:03 – 0:18', bg: '#f5ead8', fg: '#201e1d', caption: 'Last month a bakery owner came to me with…', why: 'Real people and real moments. Jump cuts keep the pace up, and captions carry the message for people watching on mute.' },
+  { name: 'Payoff', from: 0.6, to: 0.87, time: '0:18 – 0:26', bg: '#7a8a5e', fg: '#201e1d', caption: 'Bookings doubled in the first two weeks.', why: 'Deliver on the hook. The before and after lands here, and it is what gets shared and saved.' },
+  { name: 'Call to action', from: 0.87, to: 1, time: '0:26 – 0:30', bg: '#ffe1d0', fg: '#201e1d', caption: 'Link in bio for a free site audit.', why: 'One clear, warm ask that points back to your website, so views become leads.' }
+];
+const REELS = [
+  { kind: 'Reel', title: 'Day in the studio', slot: 'reel video', cat: 'Behind the scenes' },
+  { kind: 'Short', title: 'Before / after redesign', slot: 'reel video', cat: 'Brand stories' },
+  { kind: 'TikTok', title: '3 homepage fixes', slot: 'reel video', cat: 'Tips' },
+  { kind: 'Reel', title: 'Meet the founder', slot: 'reel video', cat: 'Brand stories' },
+  { kind: 'Reel', title: 'Packing orders ASMR', slot: 'reel video', cat: 'Behind the scenes' },
+  { kind: 'Short', title: 'Why your site feels slow', slot: 'reel video', cat: 'Tips' },
+  { kind: 'TikTok', title: 'Wedding week recap', slot: 'reel video', cat: 'Brand stories' },
+  { kind: 'Reel', title: 'Launch day', slot: 'reel video', cat: 'Behind the scenes' }
+];
+const TINTS = [['#ffc6a5', '#ffe1d0'], ['#ccdbb2', '#e1eecc'], ['#dcd3c4', '#eee7db']];
+const CATS = ['All', 'Brand stories', 'Behind the scenes', 'Tips'];
+
+class Component extends DCLogic {
+  state = { head: 4, hover: -1, cat: 'All', heroProg: 0 };
+  heroRef = React.createRef();
+  trackRef = React.createRef();
+  componentDidMount() {
+    this.t = setInterval(() => this.setState(s => ({ heroProg: (s.heroProg + 0.8) % 100 })), 60);
+    this.onPM = e => { if (this.dragging) this.seek(e.clientX); };
+    this.onPU = () => { this.dragging = false; };
+    window.addEventListener('pointermove', this.onPM);
+    window.addEventListener('pointerup', this.onPU);
+  }
+  componentWillUnmount() { clearInterval(this.t); window.removeEventListener('pointermove', this.onPM); window.removeEventListener('pointerup', this.onPU); }
+  seek(x) {
+    const r = this.trackRef.current?.getBoundingClientRect(); if (!r) return;
+    this.setState({ head: Math.min(100, Math.max(0, ((x - r.left) / r.width) * 100)) });
+  }
+  renderVals() {
+    const { head, hover, cat } = this.state;
+    const p = head / 100;
+    const idx = Math.max(0, SEGS.findIndex(s => p >= s.from && p <= s.to));
+    const list = REELS.filter(r => cat === 'All' || r.cat === cat);
+    return {
+      heroRef: this.heroRef, trackRef: this.trackRef, heroProg: this.state.heroProg.toFixed(1),
+      onHeroMove: e => {
+        const el = this.heroRef.current; if (!el) return; const r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (((e.clientX - r.left) / r.width - .5) * 2).toFixed(3));
+        el.style.setProperty('--my', (((e.clientY - r.top) / r.height - .5) * 2).toFixed(3));
+      },
+      onHeroLeave: () => { const el = this.heroRef.current; if (el) { el.style.setProperty('--mx', 0); el.style.setProperty('--my', 0); } },
+      head, clip: SEGS[idx],
+      segs: SEGS.map((s, i) => ({ ...s, flex: Math.round((s.to - s.from) * 100), op: i === idx ? 1 : 0.45 })),
+      onTrackDown: e => { this.dragging = true; this.seek(e.clientX); },
+      filters: CATS.map(c => ({ label: c, bg: c === cat ? '#f9f4ed' : 'transparent', pick: () => this.setState({ cat: c, hover: -1 }) })),
+      reels: list.map((r, i) => {
+        const on = i === hover, t = TINTS[i % 3];
+        return { ...r, c1: t[0], c2: t[1], tf: on ? 'translateY(-10px) scale(1.03)' : 'none', sh: on ? '0 20px 40px rgba(46,43,37,.25)' : '0 3px 10px rgba(46,43,37,.1)',
+          prog: on ? '100%' : '0%', dur: on ? '6s' : '.3s',
+          enter: () => this.setState({ hover: i }), leave: () => this.setState({ hover: -1 }) };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>
